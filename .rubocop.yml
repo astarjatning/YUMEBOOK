@@ -1,0 +1,25 @@
+inherit_from: .rubocop_todo.yml # .rubocop_todo.ymlが空になったらこの行は削除。
+
+require:
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-performance
+
+# 全体に適応する項目を定義。Excludeに設定したファイルはチェック対象外。
+AllCops:
+  Exclude:
+    - 'vendor/**/*'
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'tmp/**/*'
+    - 'lib/**/*'
+    - 'config/**/*'
+    - 'node_modules/**/*'
+    - 'Gemfile'
+
+Rails:
+  Enabled: true
+
+# 日本語のコメントを許可
+Style/AsciiComments:
+  Enabled: false
