@@ -87,3 +87,9 @@ production:
   database: dream_diary_production
   username: dream_diary
   password: <%= ENV['DREAM_DIARY_DATABASE_PASSWORD'] %>
+
+production:
+  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
