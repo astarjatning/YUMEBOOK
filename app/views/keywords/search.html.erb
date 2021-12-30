@@ -1,0 +1,16 @@
+<div class='container'>
+  <div class="row">
+    <% if @index_keywords.any? %>
+        <ul>
+        <% @index_keywords.each do |keyword| %>
+            <li><%= link_to keyword.word, keyword_path(keyword.id) %></li>
+        <% end %>
+        </ul>
+    <% else %>
+        <p>キーワードがありません</p>
+    <% end %>
+  </div>
+  <div class="row">
+    <%= link_to '↩︎', root_path %>
+  </div>
+</div>

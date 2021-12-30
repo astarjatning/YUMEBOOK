@@ -1,13 +1,7 @@
-<div class="container pt-5">
-  <div class="row mb-3">
-    <div class="col-lg-8 offset-lg-2">
-      <div class="container">
-        <ul class="keywords-list">
-          <% @keywords.each do |keyword| %>
-            <li><%= link_to keyword.word, keyword_path(keyword.id), size: 24 %></li>
-          <% end %>
-        </ul>
-      </div>
-    </div>
-  </div>
+<div class="container">
+  <ul class="keywords-list">
+    <% @searched_keywords.each do |keyword| %>
+      <li><%= link_to keyword.word, keyword_path(keyword.id) %></li>
+    <% end %>
+  </ul>
 </div>
