@@ -6,4 +6,8 @@ class KeywordsController < ApplicationController
   def show
     @keyword = Keyword.find(params[:id])
   end
+
+  def search
+    @index_keywords = Keyword.search(params[:furigana])
+  end
 end

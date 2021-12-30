@@ -1,14 +1,17 @@
- .container-fluid h1{
-         font-family: 'Futura';
-         font-weight: 900;
-         margin-left: 15px;
-    .logo{
-        text-decoration: none;
-        color: dimgray;
-        font-size: 45px;
-    }
-    }
+@import 'top';
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+
+.navbar-brand{
+    font-family: 'Futura';
+    font-weight: 900;
+    margin-left: 15px;
+    text-decoration: none;
+    color: dimgray;
+    font-size: 45px;
+}
+body{
+    color: dimgray;
+}
  
- @import 'top';
- @import 'bootstrap-sprockets';
- @import 'bootstrap';

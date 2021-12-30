@@ -1,0 +1,8 @@
+<%= search_form_for @q do |f| %>
+  <div class="input-group">
+    <%= f.search_field :word_or_furigana_cont, placeholder: 'キーワード検索', class: 'form-control' %>
+      <div class="input-group-append">
+        <%= f.submit class: 'btn btn-primary' %>
+      </div>
+  </div>
+<% end %>
