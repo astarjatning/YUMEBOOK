@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :set_search
+  add_flash_types :success, :info, :warning, :danger
 
   def set_search
     @q = Keyword.ransack(params[:q])
