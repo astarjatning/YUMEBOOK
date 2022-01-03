@@ -1,10 +1,7 @@
 .top-logo{
-    h1 {
     font-family: 'Futura';
     font-size: 45px;
     font-weight: 900;
-    color: dimgray;
-    }
 }
 
 ul {
@@ -12,4 +9,8 @@ ul {
     list-style: none;
     width: 20%;
     }
+}
+
+.index-letter{
+    text-decoration: none;
 }

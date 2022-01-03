@@ -1,0 +1,22 @@
+@import '../../../node_modules/bootstrap/scss/bootstrap';
+@import 'top';
+
+body{
+    
+}
+.nav-link{
+    text-decoration: none;
+    color: black;
+}
+.navbar{
+    background-color: rgb(10, 83, 10);
+    text-decoration: black;
+    .navbar-brand{
+        font-family: 'Futura';
+        font-weight: 900;
+        margin-left: 15px;
+        text-decoration: none;    
+        font-size: 45px;
+    }
+}
+ 
