@@ -31,6 +31,8 @@ gem 'bootstrap'
 gem 'rails-i18n'
 gem 'ransack'
 gem 'sorcery'
+gem 'uglifier'
+gem 'jquery-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
