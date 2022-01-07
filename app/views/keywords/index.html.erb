@@ -1,7 +1,0 @@
-<div class="container">
-  <ul class="keywords-list">
-    <% @searched_keywords.each do |keyword| %>
-      <li><%= link_to keyword.word, keyword_path(keyword.id) %></li>
-    <% end %>
-  </ul>
-</div>

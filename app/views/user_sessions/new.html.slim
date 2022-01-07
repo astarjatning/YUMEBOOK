@@ -1,0 +1,15 @@
+.container
+  .row-center
+    .col-md-6.col-lg-6.mt-5
+      h1
+        | ログイン
+      = form_with url: login_path, local: true do |f|
+        .form-group
+          = f.label :email
+          = f.text_field :email, class: 'form-control'
+        .form-group
+          = f.label :password
+          = f.password_field :password, class: 'form-control'
+        .actions
+          = f.submit 'ログイン', class: 'btn btn-warning my-3'
+      = link_to '← back', root_path

@@ -1,0 +1,22 @@
+.container
+  .row-center
+    .col-md-6.col-lg-6.mt-5
+      h1
+        | あたらしい日記
+      = form_with model: @diary, local: true do |f|
+        = render 'shared/error_messages', object: f.object
+        .form_group.mt-3
+          = f.label :date
+          = date_select :date, class: 'form-control', value: (f.object.date || Time.now.strftime("%Y-%m-%d"))    
+        .form-group.mt-3
+          = f.label :title
+          = f.text_field :title, class: 'form-control'
+        .form-group.mt-3
+          = f.label :story
+          = f.text_area :story, class: 'form-control'
+        .form-group.mt-3
+          = f.label :date
+        .actions
+          = f.submit '登録', class: 'btn btn-warning my-3'
+  .row
+    = link_to '← back', root_path
