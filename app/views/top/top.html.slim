@@ -1,0 +1,17 @@
+.container
+  .row
+    .col-lg-8.offset-lg-2.mt-5
+      .d-flex.justify-content-center
+        h1.top-logo
+          | YUME
+          br
+          | BOOK
+  .row
+    .col-lg-6.offset-lg-3.mt-5
+      = render 'shared/search_form'
+  .row
+    .w-25
+      ul
+        - japanese_index.each do |index|
+          li
+            = link_to index, search_keywords_path(furigana: index), class: 'index-letter', style: 'color:black;'

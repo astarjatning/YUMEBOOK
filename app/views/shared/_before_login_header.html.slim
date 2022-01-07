@@ -1,0 +1,13 @@
+header
+  nav.navbar.navbar-expand-lg.fixed-top.p-2
+    .container-fluid
+      button.navbar-toggler aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="ナビゲーションの切替" data-bs-target="#navbarNavDropdown" data-bs-toggle="collapse" type="button" 
+        span.navbar-toggler-icon
+      = link_to 'YUMEBOOK', root_path, class: 'navbar-brand', style: 'color:black;'
+      #navbarNavDropdown.collapse.navbar-collapse
+
+      .navbar-nav.container-fluid.justify-content-end
+        button.btn.btn-outline-warning[type="button"]
+          = link_to 'ログイン', login_path, class: 'nav-link', style: 'color:black;'
+        button.btn.ml-3.btn-outline-warning[type="button"]
+          = link_to '新規登録', new_user_path, class: 'nav-link', style: 'color:black;'

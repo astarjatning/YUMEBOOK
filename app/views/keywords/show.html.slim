@@ -1,0 +1,9 @@
+.container
+  .row
+    .col-lg-8.offset-lg-2.mt-5
+      h1
+        = @keyword.word
+      p
+        = @keyword.description
+  .row.mt-3
+    = link_to '← back', :back
