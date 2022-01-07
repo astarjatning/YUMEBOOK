@@ -1,5 +1,5 @@
 class DiariesController < ApplicationController
-  before_action :set_diary, only: %i[edit update destroy]
+  before_action :set_diary, only: %i[show edit update destroy]
 
   def index
     @diaries = Diary.all
@@ -17,6 +17,8 @@ class DiariesController < ApplicationController
       render :new
     end
   end
+
+  def show; end
 
   def edit; end
 

@@ -1,0 +1,13 @@
+= form_with model: @diary, local: true do |f|
+  = render 'shared/error_messages', object: f.object
+  .form_group.mt-5
+    = f.text_field :date, placeholder: '日付を選択', class: 'flatpickr'
+  .form-group.mt-3
+    = f.label :title
+    = f.text_field :title, class: 'form-control'
+  .form-group.mt-3
+    = f.label :story
+    = f.text_area :story, class: 'form-control'
+  .form-group.mt-3
+  .actions
+    = f.submit '登録', class: 'btn btn-warning my-3'
