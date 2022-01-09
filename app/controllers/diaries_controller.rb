@@ -7,10 +7,13 @@ class DiariesController < ApplicationController
 
   def new
     @diary = Diary.new
+    @word = Keyword.find(params[:keyword_id]) if params[:keyword_id].present?
   end
-
+  
   def create
     @diary = current_user.diaries.build(diary_params)
+    @diary.addings.build(params[:keyword_id])
+    binding.pry
     if @diary.save
       redirect_to @diary, warning: '日記を作成しました'
     else
@@ -43,6 +46,6 @@ class DiariesController < ApplicationController
   end
 
   def diary_params
-    params.require(:diary).permit(:title, :date, :story)
+    params.require(:diary).permit(:title, :date, :story, addings_attributes: [:id, :keyword_id])
   end
 end

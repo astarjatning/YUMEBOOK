@@ -1,9 +1,18 @@
 .container
   .row
-    .col-lg-8.offset-lg-2.mt-5
-      h1
-        = @keyword.word
-      p
-        = @keyword.description
+    .col-md-8.offset-md-2.col-lg-8.offset-lg-2.mt-5
+      diary.card
+        .card-body
+          h5.d-inline
+            = @keyword.word
+          table.table
+            tr
+              th scope="row"
+              td= @keyword.description
+          ul.list-inline.float-right
+            .list-inline-item
+              button.btn.btn-outline-warning[type="button"]
+                = link_to '日記に登録', new_diary_path(keyword_id: @keyword.id), style: 'color:black;'
+            
   .row.mt-3
     = link_to '← back', :back
