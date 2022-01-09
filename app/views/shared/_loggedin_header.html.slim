@@ -14,4 +14,5 @@ header
             ul.dropdown-menu aria-labelledby="navbarDropdownMenuLink" 
               li.dropdown-item= link_to current_user.name, '#', class: 'nav-link'
               .dropdown-divider
+              li.dropdown-item= link_to '日記一覧', diaries_path, class: 'nav-link'
               li.dropdown-item= link_to 'ログアウト', logout_path, method: :delete, class: 'nav-link'

@@ -10,10 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_05_054645) do
+ActiveRecord::Schema.define(version: 2022_01_07_091544) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "addings", force: :cascade do |t|
+    t.bigint "diary_id", null: false
+    t.bigint "keyword_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["diary_id"], name: "index_addings_on_diary_id"
+    t.index ["keyword_id"], name: "index_addings_on_keyword_id"
+  end
+
+  create_table "connotations", force: :cascade do |t|
+    t.string "connotation", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "diaries", force: :cascade do |t|
     t.date "date", null: false
@@ -33,6 +48,15 @@ ActiveRecord::Schema.define(version: 2022_01_05_054645) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "meanings", force: :cascade do |t|
+    t.bigint "keyword_id", null: false
+    t.bigint "connotation_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["connotation_id"], name: "index_meanings_on_connotation_id"
+    t.index ["keyword_id"], name: "index_meanings_on_keyword_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", null: false
     t.string "crypted_password"
@@ -44,5 +68,9 @@ ActiveRecord::Schema.define(version: 2022_01_05_054645) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "addings", "diaries"
+  add_foreign_key "addings", "keywords"
   add_foreign_key "diaries", "users"
+  add_foreign_key "meanings", "connotations"
+  add_foreign_key "meanings", "keywords"
 end
