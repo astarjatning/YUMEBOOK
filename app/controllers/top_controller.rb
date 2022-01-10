@@ -1,3 +1,5 @@
 class TopController < ApplicationController
-  def top; end
+  def top
+    @index_list = ApplicationController.helpers.japanese_index
+  end
 end

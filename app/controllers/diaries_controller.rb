@@ -2,7 +2,7 @@ class DiariesController < ApplicationController
   before_action :set_diary, only: %i[show edit update destroy]
 
   def index
-    @diaries = Diary.all
+    @diaries = current_user.diaries.all
   end
 
   def new
@@ -13,7 +13,7 @@ class DiariesController < ApplicationController
   def create
     @diary = current_user.diaries.build(diary_params)
     @diary.addings.build(params[:keyword_id])
-    binding.pry
+
     if @diary.save
       redirect_to @diary, warning: '日記を作成しました'
     else

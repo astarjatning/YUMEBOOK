@@ -1,6 +1,6 @@
 .container
   .row
-    .col-lg-8.offset-lg-2.mt-5
+    .col-lg-4.offset-lg-4.mt-5
       .d-flex.justify-content-center
         h1.top-logo
           | YUME
@@ -10,8 +10,38 @@
     .col-lg-6.offset-lg-3.mt-5
       = render 'shared/search_form'
   .row
-    .w-25
-      ul
-        - japanese_index.each do |index|
-          li
-            = link_to index, search_keywords_path(furigana: index), class: 'index-letter', style: 'color:black;'
+    .col-lg-4.offset-lg-4.col-md-4.offset-md-4.mt-5
+      .justify-content-center
+        - @index_list.slice!(0,5).each do |index|
+          = link_to index, search_keywords_path(furigana: index), class: 'index-letter', style: 'color:black;'
+        br
+        - @index_list.slice!(0,5).each do |index|
+          = link_to index, search_keywords_path(furigana: index), class: 'index-letter', style: 'color:black;'
+        br
+        - @index_list.slice!(0,5).each do |index|
+          = link_to index, search_keywords_path(furigana: index), class: 'index-letter', style: 'color:black;'
+        br
+        - @index_list.slice!(0,5).each do |index|
+          = link_to index, search_keywords_path(furigana: index), class: 'index-letter', style: 'color:black;'
+        br
+        - @index_list.slice!(0,5).each do |index|
+          = link_to index, search_keywords_path(furigana: index), class: 'index-letter', style: 'color:black;'
+        br
+        - @index_list.slice!(0,5).each do |index|
+          = link_to index, search_keywords_path(furigana: index), class: 'index-letter', style: 'color:black;'
+        br
+        - @index_list.slice!(0,5).each do |index|
+          = link_to index, search_keywords_path(furigana: index), class: 'index-letter', style: 'color:black;'
+        br
+        - @index_list.slice!(0,3).each do |index|
+          = link_to index, search_keywords_path(furigana: index), class: 'index-letter', style: 'color:black;'
+        br
+        - @index_list.slice!(0,5).each do |index|
+          = link_to index, search_keywords_path(furigana: index), class: 'index-letter', style: 'color:black;'
+        br
+        = link_to 'わ', search_keywords_path(furigana: 'わ'), class: 'index-letter', style: 'color:black;'
+        p.index-letter style="display:inline;"
+          |を
+        p.index-letter style="display:inline;"
+          |ん
+      
