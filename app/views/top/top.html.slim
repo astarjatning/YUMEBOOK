@@ -1,47 +1,22 @@
 .container
   .row
-    .col-lg-4.offset-lg-4.mt-5
+    .col-lg-6.offset-lg-3.col-md-8.offset-md-2.col-md-8.offset-md-2.mt-5
       .d-flex.justify-content-center
-        h1.top-logo
-          | YUME
-          br
-          | BOOK
+        - if logged_in?
+          = render 'calendar'
+        - else
+          h1.top-logo
+            | YUME
+            br
+            | BOOK
   .row
-    .col-lg-6.offset-lg-3.mt-5
+    .col-lg-4.offset-lg-4.col-md-6.offset-md-3.col-sm-8.offset-sm-2.mt-5
       = render 'shared/search_form'
   .row
-    .col-lg-4.offset-lg-4.col-md-4.offset-md-4.mt-5
-      .justify-content-center
-        - @index_list.slice!(0,5).each do |index|
-          = link_to index, search_keywords_path(furigana: index), class: 'index-letter', style: 'color:black;'
-        br
-        - @index_list.slice!(0,5).each do |index|
-          = link_to index, search_keywords_path(furigana: index), class: 'index-letter', style: 'color:black;'
-        br
-        - @index_list.slice!(0,5).each do |index|
-          = link_to index, search_keywords_path(furigana: index), class: 'index-letter', style: 'color:black;'
-        br
-        - @index_list.slice!(0,5).each do |index|
-          = link_to index, search_keywords_path(furigana: index), class: 'index-letter', style: 'color:black;'
-        br
-        - @index_list.slice!(0,5).each do |index|
-          = link_to index, search_keywords_path(furigana: index), class: 'index-letter', style: 'color:black;'
-        br
-        - @index_list.slice!(0,5).each do |index|
-          = link_to index, search_keywords_path(furigana: index), class: 'index-letter', style: 'color:black;'
-        br
-        - @index_list.slice!(0,5).each do |index|
-          = link_to index, search_keywords_path(furigana: index), class: 'index-letter', style: 'color:black;'
-        br
-        - @index_list.slice!(0,3).each do |index|
-          = link_to index, search_keywords_path(furigana: index), class: 'index-letter', style: 'color:black;'
-        br
-        - @index_list.slice!(0,5).each do |index|
-          = link_to index, search_keywords_path(furigana: index), class: 'index-letter', style: 'color:black;'
-        br
-        = link_to 'わ', search_keywords_path(furigana: 'わ'), class: 'index-letter', style: 'color:black;'
-        p.index-letter style="display:inline;"
-          |を
-        p.index-letter style="display:inline;"
-          |ん
+    .col-lg-6.offset-lg-3.col-md-8.offset-md-2.col-sm-10.offset-sm-1.mt-5
+      .text-center
+        - @index_list.each do |line|
+          br
+          - line.each do |letter|
+            = link_to letter, search_keywords_path(furigana: letter), class: 'index-letter', style: 'color:black;'
       

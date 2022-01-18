@@ -1,18 +1,18 @@
 header
-  nav.navbar.navbar-expand-lg.fixed-top.p-2
-    .container-fluid
-      button.navbar-toggler aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="ナビゲーションの切替" data-bs-target="#navbarNavDropdown" data-bs-toggle="collapse" type="button" 
-        span.navbar-toggler-icon
-      = link_to 'YUMEBOOK', root_path, class: 'navbar-brand', style: 'color:black;'
-      #navbarNavDropdown.collapse.navbar-collapse
-        .navbar-nav.container-fluid.justify-content-end
+  nav.navbar.navbar-expand-lg.navigation.fixed-top.p-2
+    = link_to 'YUMEBOOK', root_path, class: 'navbar-brand', style: 'color:black;'
+    button.navbar-toggler aria-controls="navbarSupportedContent" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarSupportedContent" data-toggle="collapse" 
+      span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+      .navbar-nav.container-fluid.justify-content-end
           .nav-item
-            button.btn.btn-sm.btn-outline-warning type="button" = link_to '日記を書く', new_diary_path, class: 'nav-link active'
+            button.btn.btn-sm.btn-outline-warning type="button"
+              = link_to '日記を書く', new_diary_path, class: 'nav-link active', style: 'color:black;'
           .nav-item.dropdown
             button.btn.btn-outline-warning.ml-3.btn-lg.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" style="color:black;" type="button" 
               = current_user.name
             ul.dropdown-menu aria-labelledby="navbarDropdownMenuLink" 
               li.dropdown-item= link_to current_user.name, '#', class: 'nav-link'
               .dropdown-divider
-              li.dropdown-item= link_to '日記一覧', diaries_path, class: 'nav-link'
+              li.dropdown-item= link_to '日記一覧', diaries_path(user_id: current_user.id), class: 'nav-link'
               li.dropdown-item= link_to 'ログアウト', logout_path, method: :delete, class: 'nav-link'

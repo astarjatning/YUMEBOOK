@@ -1,0 +1,98 @@
+.simple-calendar {
+  .calendar-heading{
+    display: table;
+    width: 100%;
+    color: gray;
+  }
+
+
+  table {
+    -webkit-border-horizontal-spacing: 0px;
+    -webkit-border-vertical-spacing: 0px;
+    background-color: rgba(0, 0, 0, 0);
+      border: none;
+      border-collapse: collapse;
+      box-sizing: border-box;
+      max-width: 100%;
+      width: 100%; 
+    }
+    .calendar-title{
+      display: table-cell;
+      text-align: center;
+    }
+    .previous-month{
+      display: table-cell;
+      text-align:left;
+      float: left;
+    }
+    .next-month{
+      display: table-cell;
+      text-align: right;
+    }
+    
+    thead th{
+      padding: 6px;
+      border-style: none;
+      border-collapse: collapse;
+      box-sizing: border-box;
+      text-align: left;
+      color: gray;
+      border-bottom: none;
+    }
+    tr {
+      border-collapse: collapse;
+    }
+    
+    .table td{
+      padding: 10px;
+      vertical-align: top;
+      width: 14%;
+      border-style: none;
+      border-top: none;
+      color:grey;
+    }
+    
+    .table thead th {
+      vertical-align: bottom;
+      border-bottom: none;
+  }
+  
+    .day {
+      height: 20px;
+    }
+    
+
+    .date-with-diary{
+      background-color: rgb(231, 213, 46);
+      border-radius: 50%;
+      font-size: 12px;
+    }
+
+    .wday-0 {}
+    .wday-1 {}
+    .wday-2 {}
+    .wday-3 {}
+    .wday-4 {}
+    .wday-5 {}
+    .wday-6 {}
+  
+    .today {
+      background: #f5f5f5de;
+      border-radius: 25%;
+    }
+  
+    .past {}
+    .future {}
+  
+    .start-date {}
+  
+    .prev-month {
+      background: white;
+    }
+    .next-month {
+      background: white;
+    }
+    .current-month {}
+  
+    .has-events {}
+  }

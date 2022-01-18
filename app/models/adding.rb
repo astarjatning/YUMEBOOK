@@ -1,4 +1,4 @@
 class Adding < ApplicationRecord
-  belongs_to :diary, optional: true
-  belongs_to :keyword, optional: true
+  belongs_to :diary
+  belongs_to :keyword
 end

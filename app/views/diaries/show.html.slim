@@ -24,10 +24,13 @@
           tr
             th scope="row"
               | keywords
+              br
+            td
               - if @diary.keywords.any?
                 - @diary.keywords.each do |keyword|
+                  = keyword.word
                   - keyword.connotations.each do |connotation|
-                    ul
-                      td.li= connotation.connotation
+                    li= connotation.connotation
+
   .row.mt-3
-    = link_to '← back', diaries_path
+    = link_to '← back', diaries_path, style: 'color:black;'

@@ -8,18 +8,17 @@
   .form-group.mt-3
     = f.label :story
     = f.text_area :story, class: 'form-control'
-  = f.fields_for :addings, diary.addings.build do |add|  
-    .add-area
-      .add-area_title
-        | キーワード
-    - if word.present?
-      .add-area_form
-        = add.hidden_field :keyword_id, value: word.id, class: 'form-control'
-        = word.word
-        - word.connotations.each do |connotation|
-          li = connotation.connotation
-    - else
-      | 未登録です
+  - if word.present?
+    = hidden_field :keyword, :keyword_id, value: word.id
+    div 
+      | キーワード
+      = @word.word
+    div 
+      - @word.connotations.each do |connotation|
+        li= connotation.connotation
+  - else
+    | 未登録です
+  
   .form-group.mt-3
   .actions
     = f.submit '登録', class: 'btn btn-warning my-3'
