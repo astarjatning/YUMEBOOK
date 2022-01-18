@@ -1,10 +1,29 @@
 .container
   .row
     .col-md-6.offset-md-3.col-lg-6.offset-lg-3.mt-5
-      ul.diaries-list
-        - @diaries.each do |diary|
-          li.my-2
-            = link_to(diary_path(diary)) do
-              = l diary.date
+      - if @dated_diaries.present?
+        ul.diaries-list
+          - @dated_diaries.each do |diary|
+            li.my-2
+              = link_to(diary_path(diary), style: 'color:black;') do
+                = l diary.date
+                | &ensp;
+                - if diary.title.present?
+                  = diary.title
+                - else
+                  | タイトルなし
+      - elsif @diaries.present?
+        ul.diaries-list
+          - @diaries.each do |diary|
+            li.my-2
+              = link_to(diary_path(diary), style: 'color:black;') do
+                = l diary.date
+                | &ensp;
+                - if diary.title.present?
+                  = diary.title
+                - else
+                  | タイトルなし
+      - else
+        | まだありません
   .row.mt-3
-    = link_to '← back', root_path
+    = link_to '← back', root_path, style: 'color:black;'

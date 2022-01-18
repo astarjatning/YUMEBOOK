@@ -1,9 +1,17 @@
-require 'nkf'
-
 module KeywordsHelper
   def japanese_index
-    text = ("ｱ".."ﾝ").to_a.map{ |letter| NKF.nkf("-h1w", letter) }
-    text.pop
-    return text
+    a = ['あ','い','う','え','お']
+    k = ['か','き','く','け','こ']
+    s = ['さ','し','す','せ','そ']
+    t = ['た','ち','つ','て','と']
+    n = ['な','に','ぬ','ね','の']
+    h = ['は','ひ','ふ','へ','ほ']
+    m = ['ま','み','む','め','も']
+    y = ['や','ゆ','よ']
+    r = ['ら','り','る','れ','ろ']
+    w = ['わ','を','ん']
+    arr = []
+    arr.push(a,k,s,t,n,h,m,y,r,w)
+    return arr
   end
 end
