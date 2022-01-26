@@ -1,20 +1,11 @@
-import 'jquery'
-import Rails from "@rails/ujs"
-import Turbolinks from "turbolinks"
-import * as ActiveStorage from "@rails/activestorage"
-import "channels"
-import 'bootstrap'
-import '../stylesheets/application'
-
-require('flatpickr')
-require('flatpickr/dist/l10n/ja')
-require("flatpickr")
-import flatpickr from "flatpickr";
-document.addEventListener("turbolinks:load", () => {
-  flatpickr("[class='flatpickr']", {
-    disableMobile: true
-  })
-})
+import 'jquery';
+import Rails from '@rails/ujs';
+import Turbolinks from 'turbolinks';
+import * as ActiveStorage from '@rails/activestorage';
+import 'channels';
+import 'bootstrap';
+import '../stylesheets/application';
+import '../javascripts/flatpickr';
 
 Rails.start()
 Turbolinks.start()

@@ -2,6 +2,7 @@
   "name": "dream-diary",
   "private": true,
   "dependencies": {
+    "@activeadmin/activeadmin": "^2.9.0",
     "@fortawesome/fontawesome-free": "^5.15.4",
     "@popperjs/core": "^2.11.0",
     "@rails/actioncable": "^6.0.0",
