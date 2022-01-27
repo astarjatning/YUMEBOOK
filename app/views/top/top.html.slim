@@ -1,22 +1,26 @@
 .container
   .row
-    .col-lg-6.offset-lg-3.col-md-8.offset-md-2.col-md-8.offset-md-2.mt-5
-      .d-flex.justify-content-center
+    .col-lg-6.offset-lg-3.col-md-8.offset-md-2.col-md-8.offset-md-2.mt-5.text-center
+      h1.text-center
+        | 今日どんなゆめ見た？
+  .row
+    .col-lg-6.offset-lg-3.col-md-8.offset-md-2.col-md-8.offset-md-2.mt-5.text-center
+      p 新着のゆめ
+      - if @diaries.present?
+        ul.latestd-flex.flex-column.bd-highlight.mb-3
+          - @diaries.each do |diary|
+            li.latest-dream.mb-3
+              = link_to(diary_path(diary), style: 'color:black;') do
+                = diary.title
+                br
+                = diary.story
+      - else
+        | まだありません
+  .row
+    .col-lg-6.offset-lg-3.col-md-8.offset-md-2.col-md-8.offset-md-2.mt-5.text-center
+      button.btn.btn-sm.btn-warning type="button"
         - if logged_in?
-          = render 'calendar'
+          = link_to '投稿する', new_diary_path, class: 'nav-link active', style: 'color:black;'
         - else
-          h1.top-logo
-            | YUME
-            br
-            | BOOK
-  .row
-    .col-lg-4.offset-lg-4.col-md-6.offset-md-3.col-sm-8.offset-sm-2.mt-5
-      = render 'shared/search_form'
-  .row
-    .col-lg-6.offset-lg-3.col-md-8.offset-md-2.col-sm-10.offset-sm-1.mt-5
-      .text-center
-        - @index_list.each do |line|
-          br
-          - line.each do |letter|
-            = link_to letter, search_keywords_path(furigana: letter), class: 'index-letter', style: 'color:black;'
-      
+          = link_to '投稿する', new_user_path, class: 'nav-link active', style: 'color:black;'
+          

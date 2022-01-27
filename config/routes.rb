@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   post 'login', to: 'user_sessions#create'
   delete 'logout', to: 'user_sessions#destroy'
   
+  root 'top#top'
   resources :diaries
   resources :users, only: %i[new create]
-  root 'top#top'
   resources :keywords, only: %i[index show] do
     collection do
       get 'search'

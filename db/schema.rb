@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_07_091544) do
+ActiveRecord::Schema.define(version: 2022_01_26_102314) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,9 +31,9 @@ ActiveRecord::Schema.define(version: 2022_01_07_091544) do
   end
 
   create_table "diaries", force: :cascade do |t|
-    t.date "date", null: false
-    t.string "title"
-    t.string "story"
+    t.date "date"
+    t.string "title", null: false
+    t.string "story", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
