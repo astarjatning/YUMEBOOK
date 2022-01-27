@@ -3,5 +3,6 @@ class Diary < ApplicationRecord
   has_many :addings, dependent: :destroy
   has_many :keywords, through: :addings
 
-  validates :date, presence: true
+  validates :title, presence: true
+  validates :story, presence: true
 end

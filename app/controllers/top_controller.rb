@@ -1,6 +1,5 @@
 class TopController < ApplicationController
   def top
-    @index_list = ApplicationController.helpers.japanese_index
-    @diaries = current_user.diaries.all if logged_in?
+    @diaries = Diary.order(created_at: :desc).limit(10)
   end
 end

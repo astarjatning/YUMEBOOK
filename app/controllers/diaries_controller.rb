@@ -1,29 +1,27 @@
 class DiariesController < ApplicationController
-  before_action :set_diary, only: %i[show edit update destroy]
+  before_action :set_diary, only: %i[edit update destroy]
 
   def index
-    @diaries = current_user.diaries.order(date: :asc) if params[:user_id].present?
-    @dated_diaries = current_user.diaries.where(date: params[:date]).order(created_at: :asc) if params[:date].present?
+    @diaries = current_user.diaries.order(date: :asc)
   end
 
   def new
     @diary = Diary.new
-    @word = Keyword.find(params[:keyword_id]) if params[:keyword_id].present?
-    @diary.addings.build
   end
   
   def create
     @diary = current_user.diaries.build(diary_params)
     if @diary.save
-      Adding.create(diary_id: @diary.id, keyword_id: params[:keyword][:keyword_id]) if params[:keyword].present?
-      redirect_to @diary, warning: '日記を作成しました'
+      redirect_to @diary, warning: '投稿しました'
     else
-      @word = Keyword.find(params[:keyword][:keyword_id])if params[:keyword].present?
+      flash.now[:danger] = '投稿できませんでした'
       render :new
     end
   end
 
-  def show; end
+  def show
+    @diary = Diary.find(params[:id])
+  end
 
   def edit; end
 

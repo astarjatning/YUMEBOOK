@@ -2,15 +2,21 @@
 @import "flatpickr/dist/flatpickr.css";
 @import 'top';
 
+*{
+    font-family: 'Futura';
+    background-color: rgb(10, 83, 10);
+    color: black;
+}
 .nav-link{
     text-decoration: none;
     color: black;
+    font-weight: 700;
 }
+
 .navbar{
     background-color: rgb(10, 83, 10);
     text-decoration: black;
     .navbar-brand{
-        font-family: 'Futura';
         font-weight: 900;
         margin-left: 15px;
         text-decoration: none;    

@@ -1,21 +1,66 @@
-.top-logo{
+h1{
     font-family: 'Futura';
-    font-size: 45px;
+    font-size: 28px;
     font-weight: 900;
 }
-
-ul {
-    li{
-    list-style: none;
-    width: 20%;
-    }
+p {
+    font-size: 20px;
+    font-weight: 900;
+    color:#ffc107;
+    text-shadow: 
+       2px  2px 0px #000000,
+      -2px  2px 0px #000000,
+       2px -2px 0px #000000,
+      -2px -2px 0px #000000,
+       2px  0px 0px #000000,
+       0px  2px 0px #000000,
+      -2px  0px 0px #000000,
+       0px -2px 0px #000000; 
 }
+.latest {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+  }
+  /* 吹き出し本体 */
+  .latest-dream {
+    position: relative;
+    display: inline-block;
+    margin: 0 0 0 15px;
+    padding: 7px 10px;
+    min-width: 100px;
+    max-width: 100%;
+    color: #333;
+    font-size: 16px;
+    background: #fff;
+    border: solid 3px #333;
+    box-sizing: border-box;
+    border-radius: 12px;
+  }
+  .latest-dream:before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -24px;
+    margin-top: -12px;
+    border: 12px solid transparent;
+    border-right: 12px solid #fff;
+    z-index: 2;
+  }
+  .latest-dream:after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    margin-top: -14px;
+    border: 14px solid transparent;
+    border-right: 14px solid #333;
+    z-index: 1;
+  }
+  .latest-dream p {
+    margin: 0;
+    padding: 0;
+  }
 
-.index-letter{
-    text-decoration: none;
-    font-size: 24px;
-    margin: 3px;
-    padding-left: 20px;
-    letter-spacing: 25px;
-    text-align: center;
-}

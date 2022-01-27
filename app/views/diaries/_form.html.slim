@@ -8,17 +8,7 @@
   .form-group.mt-3
     = f.label :story
     = f.text_area :story, class: 'form-control'
-  - if word.present?
-    = hidden_field :keyword, :keyword_id, value: word.id
-    div 
-      | キーワード
-      = @word.word
-    div 
-      - @word.connotations.each do |connotation|
-        li= connotation.connotation
-  - else
-    | 未登録です
   
   .form-group.mt-3
   .actions
-    = f.submit '登録', class: 'btn btn-warning my-3'
+    = f.submit '投稿', class: 'btn btn-warning my-3'

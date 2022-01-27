@@ -3,34 +3,21 @@
     .col-md-8.offset-md-2.col-lg-8.offset-lg-2.mt-5
       diary.card
         .card-body
+          - if logged_in? && @diary.user_id == current_user.id
+            ul.list-inline.float-right
+              .list-inline-item
+                button.btn.btn-outline-warning[type="button"]
+                  = link_to '編集', edit_diary_path(@diary), style: 'color:black;'
+              .list-inline-item
+                button.btn.ml-3.btn-outline-warning[type="button"]
+                  = link_to '削除', diary_path(@diary), style: 'color:black;', method: :delete, data: { confirm: '削除しますか？' }
           h5.d-inline
-            | #{@diary.date}の日記
-          ul.list-inline.float-right
-            .list-inline-item
-              button.btn.btn-outline-warning[type="button"]
-                = link_to '編集', edit_diary_path(@diary), style: 'color:black;'
-            .list-inline-item
-              button.btn.ml-3.btn-outline-warning[type="button"]
-                = link_to '削除', diary_path(@diary), style: 'color:black;', method: :delete, data: { confirm: '削除しますか？' }
+            | #{@diary.title}
         table.table
-          tr
-            th scope="row"
-              | title
-            td= @diary.title
           tr
             th scope="row"
               | story 
             td= @diary.story
-          tr
-            th scope="row"
-              | keywords
-              br
-            td
-              - if @diary.keywords.any?
-                - @diary.keywords.each do |keyword|
-                  = keyword.word
-                  - keyword.connotations.each do |connotation|
-                    li= connotation.connotation
-
+              
   .row.mt-3
     = link_to '← back', diaries_path, style: 'color:black;'
