@@ -1,13 +1,13 @@
 .container
   .row
     .col-lg-6.offset-lg-3.col-md-8.offset-md-2.col-md-8.offset-md-2.mt-5.text-center
-      h1.text-center
+      h1.text-center.mb-3
         | 今日どんなゆめ見た？
+      p.mb-4 Latest Deams
   .row
     .col-lg-6.offset-lg-3.col-md-8.offset-md-2.col-md-8.offset-md-2.mt-5.text-center
-      p 新着のゆめ
       - if @diaries.present?
-        ul.latestd-flex.flex-column.bd-highlight.mb-3
+        ul.latest.d-flex.flex-column.bd-highlight.mb-3
           - @diaries.each do |diary|
             li.latest-dream.mb-3
               = link_to(diary_path(diary), style: 'color:black;') do
@@ -18,9 +18,8 @@
         | まだありません
   .row
     .col-lg-6.offset-lg-3.col-md-8.offset-md-2.col-md-8.offset-md-2.mt-5.text-center
-      button.btn.btn-sm.btn-warning type="button"
-        - if logged_in?
-          = link_to '投稿する', new_diary_path, class: 'nav-link active', style: 'color:black;'
-        - else
-          = link_to '投稿する', new_user_path, class: 'nav-link active', style: 'color:black;'
+      - if logged_in?
+        = link_to '投稿する', new_diary_path, class: 'nav-link active', style: 'color:black;'
+      - else
+        = link_to '投稿する', new_user_path, class: 'nav-link active', style: 'color:black;'
           

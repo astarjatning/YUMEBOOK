@@ -1,8 +1,8 @@
 .container
   .row-center
-    .col-md-6.offset-md-3.col-lg-6.offset-lg-3.mt-5
+    .profile-field.col-md-6.offset-md-3.col-lg-6.offset-lg-3.mt-5
       h1
         | #{@diary.title}の編集
       = render 'form', diary: @diary
-  .row
-    = link_to '← back', diaries_path, style: 'color:black;'
+      .row
+        = link_to '← back', diaries_path, style: 'color:black;'

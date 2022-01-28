@@ -1,0 +1,23 @@
+.container
+  .row
+    .profile-field.col-md-6.offset-md-3.col-lg-6.offset-lg-3.mt-5
+      ul.list-inline.float-right
+        .list-inline-item
+        button.btn.btn-warning[type="button"]
+          = link_to '編集', edit_profile_path, style: 'color:black;'
+      table.table
+        tr
+        th scope="row"
+            | Name
+        td= @user.name
+        tr
+        th scope="row"
+            | Email
+        td= @user.email
+        tr
+        th scope="row"
+            | Avatar
+        td= image_tag @user.avatar.url, class: 'rounded-circle mr15', size: '50x50'
+              
+  .row.mt-3
+    = link_to '← back', diaries_path, style: 'color:black;'
