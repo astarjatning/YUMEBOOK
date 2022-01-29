@@ -1,7 +1,7 @@
 = form_with model: diary, local: true do |f|
   = render 'shared/error_messages', object: f.object
   .form_group.mt-5
-    = f.text_field :date, placeholder: '日付を選択', class: 'flatpickr'
+    = f.text_field :date, placeholder: t('defaults.choose_date'), class: 'flatpickr'
   .form-group.mt-3
     = f.label :title
     = f.text_field :title, class: 'form-control'
@@ -11,4 +11,4 @@
   
   .form-group.mt-3
   .actions
-    = f.submit '投稿', class: 'btn btn-warning my-3'
+    = f.submit t('defaults.submit'), class: 'btn btn-info my-3'

@@ -1,13 +1,13 @@
 header
-  nav.navbar.navbar-expand-lg.navigation.p-1
-    = link_to 'YUMEBOOK', root_path, class: 'navbar-brand', style: 'color:black;'
+  nav.navbar.navbar-expand-lg.navigation.contentsp-1
+    = link_to t('defaults.app_title'), root_path, class: 'navbar-brand', style: 'color:black;'
     button.navbar-toggler aria-controls="navbarSupportedContent" aria-label=("Toggle navigation") data-target="#navbarSupportedContent" data-toggle="collapse" 
       span.navbar-toggler-icon
     #navbarSupportedContent.collapse.navbar-collapse
       .navbar-nav.container-fluid.justify-content-end
         .nav-item
-          = link_to '新しいゆめ', new_diary_path, class: 'nav-link active', style: 'color:black;'
+          = link_to t('defaults.new_dream'), new_diary_path, class: 'nav-link active', style: 'color:black;'
         .nav-item
-          = link_to 'マイページ', diaries_path, class: 'nav-link active', style: 'color: black;'
+          = link_to t('defaults.my_page'), diaries_path, class: 'nav-link active', style: 'color: black;'
         .nav-item
-          = link_to 'ログアウト', logout_path, method: :delete, class: 'nav-link active', style: 'color: black;'
+          = link_to t('defaults.logout'), logout_path, method: :delete, class: 'nav-link active', style: 'color: black;'

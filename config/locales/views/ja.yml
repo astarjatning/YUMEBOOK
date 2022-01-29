@@ -1,0 +1,55 @@
+ja:
+  defaults:
+    app_title: 'YUMEBOOK'
+    login: 'ログイン'
+    logout: 'ログアウト'
+    register: '新規登録'
+    submit: '投稿'
+    new_dream: '新しいゆめ'
+    my_page: 'マイページ'
+    choose_date: '日付を選択'
+    message:
+      require_login: 'ログインしてください'
+      created: '投稿しました'
+  users:
+    new:
+      title: 'ユーザー登録'
+      submit: '登録'
+    create:
+      success: '登録しました'
+  user_sessions:
+    new:
+      title: 'ログイン'
+      to_register: '新規会員登録'
+      password_forgot: 'forgot password?'
+      submit: 'ログイン'
+    create:
+      success: 'ログインしました'
+      fail: 'ログインできませんでした'
+    destroy:
+      success: 'ログアウトしました'
+  diaries:
+    new:
+      title: '今日どんなゆめ見た？'
+      submit: '投稿'
+    create:
+      success: '投稿しました'
+    edit:
+      submit: '更新'
+    update:
+      success: '更新しました'
+    destroy:
+      success: '削除しました'
+  top:
+    top:
+      title: '今日どんなゆめ見た？'
+      no_post: 'まだありません'
+      new_post: '投稿する'
+  profiles:
+    edit:
+      submit: '更新'
+    update: 
+      success: 'プロフィールを更新しました'
+
+
+  

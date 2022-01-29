@@ -8,15 +8,15 @@
       table.table
         tr
         th scope="row"
-            | Name
+          = t(User.human_attribute_name(:name))
         td= @user.name
         tr
         th scope="row"
-            | Email
+          = t(User.human_attribute_name(:email))
         td= @user.email
         tr
         th scope="row"
-            | Avatar
+          = t(User.human_attribute_name(:avatar))
         td= image_tag @user.avatar.url, class: 'rounded-circle mr15', size: '50x50'
               
   .row.mt-3

@@ -1,11 +1,11 @@
 .container
-  .row
+  .title-text.row
     .col-lg-6.offset-lg-3.col-md-8.offset-md-2.col-md-8.offset-md-2.mt-5.text-center
       h1.text-center.mb-3
-        | 今日どんなゆめ見た？
-      p.mb-4 Latest Deams
-  .row
+        = t('.title')
+  .row.mt-5
     .col-lg-6.offset-lg-3.col-md-8.offset-md-2.col-md-8.offset-md-2.mt-5.text-center
+      p.mb-4 Latest Deams
       - if @diaries.present?
         ul.latest.d-flex.flex-column.bd-highlight.mb-3
           - @diaries.each do |diary|
@@ -15,11 +15,11 @@
                 br
                 = diary.story
       - else
-        | まだありません
-  .row
+        = t('.no_post')
+  .row.mt-5
     .col-lg-6.offset-lg-3.col-md-8.offset-md-2.col-md-8.offset-md-2.mt-5.text-center
       - if logged_in?
-        = link_to '投稿する', new_diary_path, class: 'nav-link active', style: 'color:black;'
+        = link_to t('.new_post'), new_diary_path, class: 'nav-link active', style: 'color:black;'
       - else
-        = link_to '投稿する', new_user_path, class: 'nav-link active', style: 'color:black;'
+        = link_to t('.new_post'), new_user_path, class: 'nav-link active', style: 'color:black;'
           

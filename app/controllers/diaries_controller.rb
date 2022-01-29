@@ -2,7 +2,7 @@ class DiariesController < ApplicationController
   before_action :set_diary, only: %i[edit update destroy]
 
   def index
-    @diaries = current_user.diaries.order(date: :asc)
+    @diaries = current_user.diaries.order(date: :desc)
   end
 
   def new
@@ -12,9 +12,8 @@ class DiariesController < ApplicationController
   def create
     @diary = current_user.diaries.build(diary_params)
     if @diary.save
-      redirect_to @diary, warning: '投稿しました'
+      redirect_to @diary, warning: t('.success')
     else
-      flash.now[:danger] = '投稿できませんでした'
       render :new
     end
   end
@@ -27,16 +26,15 @@ class DiariesController < ApplicationController
 
   def update
     if @diary.update(diary_params)
-      redirect_to @diary, warning: '日記を更新しました'
+      redirect_to @diary, warning: t('.success')
     else
-      flash.now[:danger] = '日記を更新できませんでした'
       render :edit
     end
   end
 
   def destroy
     @diary.destroy!
-    redirect_to diaries_path, warning: '日記を削除しました'
+    redirect_to diaries_path, warning: t('.success')
   end
 
   private

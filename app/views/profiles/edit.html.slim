@@ -13,9 +13,9 @@
           = f.text_field :email, class: 'form-control'
         .form-group
           = f.label :avatar
-          = f.label :avatar_cache
+          = f.hidden_field :avatar_cache
           = f.file_field :avatar, class: 'form-control'
           = image_tag @user.avatar.url, class: 'rounded-circle my-3', id: 'preview', size: '100x100'
         .actions
-          = f.submit '更新', class: 'btn btn-warning my-3'
+          = f.submit t('.submit'), class: 'btn btn-warning my-3'
       = link_to '← back', profile_path
