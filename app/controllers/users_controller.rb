@@ -2,7 +2,8 @@ class UsersController < ApplicationController
   skip_before_action :require_login
 
   def show
-    @diaries = Diary.where(user_id: params[:id]).order(created_at: :desc)
+    user = User.find_by(name: params[:name])
+    @diaries = user.diaries.order(created_at: :desc)
   end
 
   def new

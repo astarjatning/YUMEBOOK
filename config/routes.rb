@@ -5,11 +5,12 @@ Rails.application.routes.draw do
   
   root 'top#top'
   resources :diaries
-  resources :users, only: %i[new create show]
+  resources :users, only: %i[new create]
   resource :profile, only: %i[show edit update]
   resources :keywords, only: %i[index show] do
     collection do
       get 'search'
     end
   end
+  get ':name', to: 'users#show'
 end

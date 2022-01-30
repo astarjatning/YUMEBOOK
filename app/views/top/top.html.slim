@@ -10,7 +10,7 @@
         - @diaries.each do |diary|
           .latest.d-flex.flex-column.mb-3
             .avatar-icon
-              = link_to user_path(diary.user_id) do
+              = link_to "/#{diary.user.name}" do
                 = image_tag diary.user.avatar.url, class: 'rounded-circle', size: '60x60'
             .latest-dream
               = link_to(diary_path(diary), style: 'color:black;') do
