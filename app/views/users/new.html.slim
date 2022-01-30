@@ -17,6 +17,8 @@
         .form-group
           = f.label :password_confirmation
           = f.password_field :password_confirmation, class: 'form-control'
-        .actions
+        .actions.text-center
           = f.submit t('.submit'), class: 'btn btn-info my-3'
-      = link_to '← back', root_path
+      .d-flex.justify-content-around
+        = link_to '← back', root_path
+        = link_to t('.to_login'), login_path

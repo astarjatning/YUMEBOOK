@@ -10,10 +10,10 @@
         .form-group
           = f.label :password, User.human_attribute_name(:password)
           = f.password_field :password, class: 'form-control'
-        .actions
+        .actions.text-center
           = link_to t('.password_forgot'), '#'
           br
-          = f.submit t('.submit'), class: 'btn btn-info my-3'
+          = f.submit t('.submit'), class: 'btn btn-info my-4'
       .d-flex.justify-content-around
         = link_to '← back', root_path
         = link_to t('.to_register'), new_user_path

@@ -1,5 +1,6 @@
 class DiariesController < ApplicationController
   before_action :set_diary, only: %i[edit update destroy]
+  skip_before_action :require_login, only: %i[show]
 
   def index
     @diaries = current_user.diaries.order(date: :desc)
@@ -12,7 +13,7 @@ class DiariesController < ApplicationController
   def create
     @diary = current_user.diaries.build(diary_params)
     if @diary.save
-      redirect_to @diary, warning: t('.success')
+      redirect_to root_path, warning: t('.success')
     else
       render :new
     end

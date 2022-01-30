@@ -1,9 +1,11 @@
 class ApplicationController < ActionController::Base
-  before_action :set_search
+  before_action :require_login
   add_flash_types :success, :info, :warning, :danger
 
-  def set_search
-    @q = Keyword.ransack(params[:q])
-    @searched_keywords = @q.result(distict: true)
+  private
+
+  def not_authenticated
+    redirect_to login_path, warning: (t 'defaults.message.require_login')
   end
+
 end

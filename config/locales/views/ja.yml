@@ -6,7 +6,8 @@ ja:
     register: '新規登録'
     submit: '投稿'
     new_dream: '新しいゆめ'
-    my_page: 'マイページ'
+    profile: 'プロフィール'
+    entries: '自分のゆめ一覧'
     choose_date: '日付を選択'
     message:
       require_login: 'ログインしてください'
@@ -15,6 +16,7 @@ ja:
     new:
       title: 'ユーザー登録'
       submit: '登録'
+      to_login: 'ログインはこちら'
     create:
       success: '登録しました'
   user_sessions:
@@ -29,6 +31,8 @@ ja:
     destroy:
       success: 'ログアウトしました'
   diaries:
+    index:
+      no_post: 'まだありません'
     new:
       title: '今日どんなゆめ見た？'
       submit: '投稿'

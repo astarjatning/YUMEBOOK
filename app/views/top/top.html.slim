@@ -1,21 +1,24 @@
 .container
   .title-text.row
-    .col-lg-6.offset-lg-3.col-md-8.offset-md-2.col-md-8.offset-md-2.mt-5.text-center
+    .col-lg-6.offset-lg-3.col-md-8.offset-md-2.mt-5.text-center
       h1.text-center.mb-3
         = t('.title')
   .row.mt-5
-    .col-lg-6.offset-lg-3.col-md-8.offset-md-2.col-md-8.offset-md-2.mt-5.text-center
-      p.mb-4 Latest Deams
+    .col-lg-8.offset-lg-2.col-md-8.offset-md-2.mt-5.text-center
+      p Latest Deams
       - if @diaries.present?
-        ul.latest.d-flex.flex-column.bd-highlight.mb-3
-          - @diaries.each do |diary|
-            li.latest-dream.mb-3
+        - @diaries.each do |diary|
+          .latest.d-flex.flex-column.mb-3
+            .avatar-icon
+              = link_to user_path(diary.user_id) do
+                = image_tag diary.user.avatar.url, class: 'rounded-circle', size: '60x60'
+            .latest-dream
               = link_to(diary_path(diary), style: 'color:black;') do
                 = diary.title
                 br
                 = diary.story
       - else
-        = t('.no_post')
+        p = t('.no_post')
   .row.mt-5
     .col-lg-6.offset-lg-3.col-md-8.offset-md-2.col-md-8.offset-md-2.mt-5.text-center
       - if logged_in?

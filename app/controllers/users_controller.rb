@@ -1,4 +1,9 @@
 class UsersController < ApplicationController
+  skip_before_action :require_login
+
+  def show
+    @diaries = Diary.where(user_id: params[:id]).order(created_at: :desc)
+  end
 
   def new
     @user = User.new
