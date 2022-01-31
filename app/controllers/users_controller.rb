@@ -1,4 +1,10 @@
 class UsersController < ApplicationController
+  skip_before_action :require_login
+
+  def show
+    user = User.find_by(name: params[:name])
+    @diaries = user.diaries.order(created_at: :desc)
+  end
 
   def new
     @user = User.new
@@ -9,10 +15,9 @@ class UsersController < ApplicationController
 
     if @user.save
       auto_login(@user)
-      redirect_to root_path, success: 'ユーザー登録が完了しました'
+      redirect_to root_path, info: t('.success')
     else
       render :new
-      flash.now[:danger] = 'ユーザー登録に失敗しました'
     end
   end
 

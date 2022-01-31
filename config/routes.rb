@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'profiles/show'
-  get 'profiles/edit'
   get 'login', to: 'user_sessions#new'
   post 'login', to: 'user_sessions#create'
   delete 'logout', to: 'user_sessions#destroy'
@@ -14,4 +12,5 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
+  get ':name', to: 'users#show'
 end

@@ -1,0 +1,17 @@
+ja:
+  activerecord:
+    models:
+      user: 'ユーザー'
+      dream: 'ゆめ'
+    attributes:
+      user:
+        name: 'なまえ'
+        email: 'メール'
+        password: 'パスワード'
+        password_confirmation: 'パスワード確認'
+        avatar: 'プロフィール画像'
+      diary:
+        title: 'タイトル'
+        story: 'ストーリー'
+        date: '日付'
+
