@@ -13,7 +13,14 @@ body{
     position: relative;
     background-image: url("../images/p_pt_0256_m_pt_02563.png");
 }
-
+h1{
+    font-family: 'Futura';
+    font-size: 30px;
+    font-weight: 900;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: black;
+}
 // header
 .navbar{
     background-image: url("../images/p_pt_0256_m_pt_02563.png");
