@@ -16,6 +16,8 @@
           = f.hidden_field :avatar_cache
           = f.file_field :avatar, class: 'form-control'
           = image_tag @user.avatar.url, class: 'rounded-circle my-3', id: 'preview', size: '100x100'
-        .actions
-          = f.submit t('.submit'), class: 'btn btn-warning my-3'
-      = link_to '← back', profile_path
+        .actions.text-center
+          = f.submit t('.submit'), class: 'btn btn-info my-3'
+    .col-md-8.offset-md-2.col-lg-8.offset-lg-2.mt-3
+       = link_to profile_path do
+        .back.i.fas.fa-hand-point-left

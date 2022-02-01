@@ -4,17 +4,11 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import 'bootstrap'
+import "@fortawesome/fontawesome-free/css/all.css"
 import '../stylesheets/application'
+import '../javascripts/flatpickr'
+import '../javascripts/toastr'
 
-require('flatpickr')
-require('flatpickr/dist/l10n/ja')
-require("flatpickr")
-import flatpickr from "flatpickr";
-document.addEventListener("turbolinks:load", () => {
-  flatpickr("[class='flatpickr']", {
-    disableMobile: true
-  })
-})
 
 Rails.start()
 Turbolinks.start()

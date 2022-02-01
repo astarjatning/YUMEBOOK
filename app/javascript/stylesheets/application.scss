@@ -1,6 +1,8 @@
 @import '../../../node_modules/bootstrap/scss/bootstrap';
-@import "flatpickr/dist/flatpickr.css";
+@import 'flatpickr/dist/flatpickr.css';
 @import 'top';
+@import 'toastr/build/toastr.min';
+@import '@fortawesome/fontawesome-free/scss/fontawesome';
 
 body{
     font-family: 'Futura';
@@ -11,56 +13,107 @@ body{
     position: relative;
     background-image: url("../images/p_pt_0256_m_pt_02563.png");
 }
-.nav-link{
-    text-decoration: none;
+h1{
+    font-family: 'Futura';
+    font-size: 30px;
+    font-weight: 900;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     color: black;
-    font-weight: 700;
 }
-
+// header
 .navbar{
     background-image: url("../images/p_pt_0256_m_pt_02563.png");
     text-decoration: black;
-    text-shadow: 
-       4px  4px 1px #ffffff,
-      -4px  4px 1px #ffffff,
-       4px -4px 1px #ffffff,
-      -4px -4px 1px #ffffff,
-       4px  0px 1px #ffffff,
-       0px  4px 1px #ffffff,
-      -4px  0px 1px #ffffff,
-       0px -4px 1px #ffffff; 
+    
     .navbar-brand{
         font-weight: 900;
-        margin-left: 15px;
+        margin-left: 3rem;
         text-decoration: none;    
         font-size: 45px;
-    }
+        text-shadow: 
+            5px  5px 0px #ffffff,
+            -5px  5px 0px #ffffff,
+            5px -5px 0px #ffffff,
+            -5px -5px 0px #ffffff,
+            5px  0px 0px #ffffff,
+            0px  5px 0px #ffffff,
+            -5px  0px 0px #ffffff,
+            0px -5px 0px #ffffff;  
+        }
+        .navbar-nav{
+            text-shadow: 
+                5px  5px 0px #ffffff,
+                -5px  5px 0px #ffffff,
+                5px -5px 0px #ffffff,
+                -5px -5px 0px #ffffff,
+                5px  0px 0px #ffffff,
+                0px  5px 0px #ffffff,
+                -5px  0px 0px #ffffff,
+                0px -5px 0px #ffffff;  
 
+    }
+    .nav-link{
+        text-decoration: none;
+        color: black;
+        font-weight: 700;
+    }
     .nav-item{
-        margin-right: 2rem;
+        transition: all 0.3s ease 0s;
+        margin-right: 3rem
+    }
+    .nav-item:hover{
+        cursor: pointer;
+        transform: scale(1.1, 1.1);
     }
     .avatar-icon{
         border: solid 2px #333;
         border-radius: 50%;
+    }   
+    .navbar-toggler{
+        border-color: black;
+        background-color: white;
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
     }
 }
-.navbar-toggler{
-    border-color: black;
-    background-color: white;
-    .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-      }
-  }
 
-ul li{
-    width: 100%;
-    height: 100%;
+// リンクとかアイコン
+.back{
+    font-size: 2.5rem;
+    color: black;
+    transition: all 0.3s ease 0s;
+}
+.back:hover{
+    cursor: pointer;
+    transform: scale(1.2, 1.2);
+}
+
+i{
+    font-size: 1.5rem;
+    color: #17a2b8;
+    transition: all 0.3s ease 0s;
+}
+i:hover{
+    cursor: pointer;
+    transform: scale(1.2, 1.2);
+}
+
+.active-link{
+    transition: all 0.3s ease 0s;
+}
+.active-link:hover{
+    cursor: pointer;
+    transform: scale(1.1, 1.1);
+    text-decoration:none !important;
 }
 
 ul{
     margin:0;
     padding:0;
 }
+
 .profile-field{
     background-color: white;
     border: solid 5px #333;
@@ -73,10 +126,16 @@ ul{
             border-radius: 50%;
             margin-right: 1rem;
             margin-bottom: 1rem;
+            transition: all 0.3s ease 0s;
+        }
+        .avatar-icon:hover{
+            cursor: pointer;
+            transform: scale(1.1, 1.1);
         }
     }
 }
 
+// footer
 footer{
     position: absolute;
     bottom: 0;
@@ -92,6 +151,7 @@ footer{
       -4px  0px 1px #ffffff,
        0px -4px 1px #ffffff; 
 }
+
 .cushion{
     height: 10rem;
 }

@@ -1,18 +1,18 @@
 header
   nav.navbar.navbar-expand-lg.navigation.contentsp-1
-    = link_to t('defaults.app_title'), root_path, class: 'navbar-brand', style: 'color:black;'
+    = link_to t('defaults.app_title'), root_path, class: 'active-link navbar-brand', style: 'color:black;'
     button.navbar-toggler aria-controls="navbarSupportedContent" aria-label=("Toggle navigation") data-target="#navbarSupportedContent" data-toggle="collapse" 
       span.navbar-toggler-icon
     #navbarSupportedContent.collapse.navbar-collapse
       .navbar-nav.container-fluid.justify-content-end
-        .nav-item
-          = link_to t('defaults.new_dream'), new_diary_path, class: 'nav-link active', style: 'color:black;'
-      .nav-item.dropdown
-        .dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" style="color:black;" type="button" 
+        .nav-item.mr-3
+          = link_to t('defaults.new_dream'), new_diary_path, class: 'active-link', style: 'color:black;'
+      .nav-item.dropdown.mr-3
+        .dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button" 
           = image_tag current_user.avatar.url, class: 'avatar-icon rounded-circle mr15', size: '40x40'
         ul.dropdown-menu.dropdown-menu-right aria-labelledby="navbarDropdownMenuLink" 
           li.dropdown-item
-            = link_to t('defaults.profile'), profile_path, class: 'nav-link'
+            = link_to t('defaults.profile'), profile_path, class: 'nav-link active', style: 'color: black;'
           li.dropdown-item
             = link_to t('defaults.entries'), diaries_path, class: 'nav-link active', style: 'color: black;'
           li.dropdown-item

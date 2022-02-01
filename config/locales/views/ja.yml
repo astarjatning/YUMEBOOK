@@ -22,12 +22,12 @@ ja:
   user_sessions:
     new:
       title: 'ログイン'
-      to_register: '新規会員登録'
+      to_register: '新規登録'
       password_forgot: 'forgot password?'
       submit: 'ログイン'
     create:
       success: 'ログインしました'
-      fail: 'ログインできませんでした'
+      fail: 'ログインに失敗しました'
     destroy:
       success: 'ログアウトしました'
   diaries:
@@ -46,9 +46,10 @@ ja:
       success: '削除しました'
   top:
     top:
-      title: '今日どんなゆめ見た？'
+      title: '今日見たゆめをシェアしよう'
       no_post: 'まだありません'
-      new_post: '投稿する'
+      new_post: 'シェアしてみる'
+      new_posts: ' new !'
   profiles:
     edit:
       submit: '更新'

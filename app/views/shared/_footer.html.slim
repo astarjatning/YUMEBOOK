@@ -1,12 +1,12 @@
 .cushion
   footer.mt-5
     .d-flex.justify-content-around
-      .footer-item
+      .active-link
         = link_to '利用規約', '#', style: 'color: black;'
-      .footer-item
-      = link_to 'プライバシーポリシー', '#', style: 'color: black;'
-      .footer-item
-        = link_to 'お問い合わせ', '#', style: 'color: black;'
+      .active-link
+        = link_to 'プライバシーポリシー', '#', class: 'active-link', style: 'color: black;'
+      .active-link
+        = link_to 'お問い合わせ', '#', class: 'active-link', style: 'color: black;'
     .copyright.mt-3.text-center
       | Copyright © 2022 YUMEBOOK
     

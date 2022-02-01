@@ -6,7 +6,7 @@ ja:
     attributes:
       user:
         name: 'なまえ'
-        email: 'メール'
+        email: 'メールアドレス'
         password: 'パスワード'
         password_confirmation: 'パスワード確認'
         avatar: 'プロフィール画像'

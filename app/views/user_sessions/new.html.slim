@@ -11,9 +11,10 @@
           = f.label :password, User.human_attribute_name(:password)
           = f.password_field :password, class: 'form-control'
         .actions.text-center
-          = link_to t('.password_forgot'), '#'
-          br
-          = f.submit t('.submit'), class: 'btn btn-info my-4'
+          .active-link
+            = link_to t('.password_forgot'), '#', class: 'active-link', style: 'color:black;'
+          = f.submit t('.submit'), class: 'active-link btn btn-info my-4'
       .d-flex.justify-content-around
-        = link_to '← back', root_path
-        = link_to t('.to_register'), new_user_path
+        = link_to root_path, class: 'active-link' do
+          .back.i.fas.fa-hand-point-left
+        = link_to t('.to_register'), new_user_path, class: 'active-link', style: 'color:black;'

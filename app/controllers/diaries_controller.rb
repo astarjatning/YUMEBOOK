@@ -3,7 +3,7 @@ class DiariesController < ApplicationController
   skip_before_action :require_login, only: %i[show]
 
   def index
-    @diaries = current_user.diaries.order(date: :desc)
+    @diaries = current_user.diaries.order(created_at: :desc)
   end
 
   def new
@@ -13,7 +13,7 @@ class DiariesController < ApplicationController
   def create
     @diary = current_user.diaries.build(diary_params)
     if @diary.save
-      redirect_to root_path, warning: t('.success')
+      redirect_to root_path, info: t('.success')
     else
       render :new
     end
@@ -27,7 +27,7 @@ class DiariesController < ApplicationController
 
   def update
     if @diary.update(diary_params)
-      redirect_to @diary, warning: t('.success')
+      redirect_to @diary, info: t('.success')
     else
       render :edit
     end
@@ -35,7 +35,7 @@ class DiariesController < ApplicationController
 
   def destroy
     @diary.destroy!
-    redirect_to diaries_path, warning: t('.success')
+    redirect_to diaries_path, info: t('.success')
   end
 
   private
