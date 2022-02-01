@@ -4,17 +4,29 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import 'bootstrap'
+import "@fortawesome/fontawesome-free/css/all.css"
 import '../stylesheets/application'
+import '../javascripts/flatpickr'
+import toastr from 'toastr'
+window.toastr = toastr
+toastr.options = {
+  "closeButton": false,
+  "debug": false,
+  "newestOnTop": false,
+  "progressBar": false,
+  "positionClass": "toast-top-left",
+  "preventDuplicates": false,
+  "onclick": null,
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "5000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+}
 
-require('flatpickr')
-require('flatpickr/dist/l10n/ja')
-require("flatpickr")
-import flatpickr from "flatpickr";
-document.addEventListener("turbolinks:load", () => {
-  flatpickr("[class='flatpickr']", {
-    disableMobile: true
-  })
-})
 
 Rails.start()
 Turbolinks.start()

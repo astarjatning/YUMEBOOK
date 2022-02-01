@@ -1,11 +1,12 @@
 .container
   .title-text.row
     .col-lg-6.offset-lg-3.col-md-8.offset-md-2.mt-5.text-center
-      h1.text-center.mb-3
+      h1.text-center
         = t('.title')
   .row.mt-5
-    .col-lg-8.offset-lg-2.col-md-8.offset-md-2.mt-5.text-center
-      p Latest Deams
+    .col-lg-8.offset-lg-2.col-md-8.offset-md-2.text-center
+      p.i.fas.fa-bed
+        = t('.new_posts')
       - if @diaries.present?
         - @diaries.each do |diary|
           .latest.d-flex.flex-column.mb-3
@@ -13,7 +14,7 @@
               = link_to "/#{diary.user.name}" do
                 = image_tag diary.user.avatar.url, class: 'rounded-circle', size: '60x60'
             .latest-dream
-              = link_to(diary_path(diary), style: 'color:black;') do
+              = link_to(diary_path(diary), class: 'active-link', style: 'color:black;') do
                 = diary.title
                 br
                 = diary.story
@@ -22,7 +23,7 @@
   .row.mt-5
     .col-lg-6.offset-lg-3.col-md-8.offset-md-2.col-md-8.offset-md-2.mt-5.text-center
       - if logged_in?
-        = link_to t('.new_post'), new_diary_path, class: 'nav-link active', style: 'color:black;'
+        = link_to t('.new_post'), new_diary_path, class: 'active-link', style: 'color:black;'
       - else
-        = link_to t('.new_post'), new_user_path, class: 'nav-link active', style: 'color:black;'
+        = link_to t('.new_post'), new_user_path, class: 'active-link', style: 'color:black;'
           

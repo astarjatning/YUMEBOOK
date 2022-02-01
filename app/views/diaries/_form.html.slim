@@ -1,6 +1,6 @@
 = form_with model: diary, local: true do |f|
   = render 'shared/error_messages', object: f.object
-  .form_group.mt-5
+  .form_group.mt-3
     = f.text_field :date, placeholder: t('defaults.choose_date'), class: 'flatpickr'
   .form-group.mt-3
     = f.label :title
@@ -8,7 +8,6 @@
   .form-group.mt-3
     = f.label :story
     = f.text_area :story, class: 'form-control'
-  
   .form-group.mt-3
-  .actions
+  .actions.text-center
     = f.submit t('defaults.submit'), class: 'btn btn-info my-3'
