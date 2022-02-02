@@ -7,7 +7,7 @@ ja:
     submit: '投稿'
     new_dream: '新しいゆめ'
     profile: 'プロフィール'
-    entries: '自分のゆめ一覧'
+    my_posts: '自分のゆめ一覧'
     choose_date: '日付を選択'
     message:
       require_login: 'ログインしてください'
@@ -48,8 +48,9 @@ ja:
     top:
       title: '今日見たゆめをシェアしよう'
       no_post: 'まだありません'
-      new_post: 'シェアしてみる'
-      new_posts: ' new !'
+      try_post: '投稿してみる'
+      new_posts: '新着のゆめ'
+      more_posts: 'もっと見る'
   profiles:
     edit:
       submit: '更新'

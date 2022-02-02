@@ -5,7 +5,6 @@
 @import '@fortawesome/fontawesome-free/scss/fontawesome';
 
 body{
-    font-family: 'Futura';
     color: black;
     font-weight: 800;
     width: 100%;
@@ -14,23 +13,26 @@ body{
     background-image: url("../images/p_pt_0256_m_pt_02563.png");
 }
 h1{
-    font-family: 'Futura';
     font-size: 30px;
     font-weight: 900;
     padding-top: 2rem;
     padding-bottom: 2rem;
     color: black;
 }
+
 // header
 .navbar{
     background-image: url("../images/p_pt_0256_m_pt_02563.png");
     text-decoration: black;
+    width: 100%;
+    max-width: 100%;
     
     .navbar-brand{
+        font-family: 'Futura';
         font-weight: 900;
         margin-left: 3rem;
         text-decoration: none;    
-        font-size: 45px;
+        font-size: 2.1rem;
         text-shadow: 
             5px  5px 0px #ffffff,
             -5px  5px 0px #ffffff,
@@ -41,7 +43,7 @@ h1{
             -5px  0px 0px #ffffff,
             0px -5px 0px #ffffff;  
         }
-        .navbar-nav{
+        .navbar-nav:not(.nav-item li){
             text-shadow: 
                 5px  5px 0px #ffffff,
                 -5px  5px 0px #ffffff,
@@ -60,7 +62,8 @@ h1{
     }
     .nav-item{
         transition: all 0.3s ease 0s;
-        margin-right: 3rem
+        margin-right: 3rem;
+        margin-top: 1rem;
     }
     .nav-item:hover{
         cursor: pointer;
@@ -73,6 +76,7 @@ h1{
     .navbar-toggler{
         border-color: black;
         background-color: white;
+        box-sizing: border-box;
         .navbar-toggler-icon {
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
         }
@@ -90,11 +94,12 @@ h1{
     transform: scale(1.2, 1.2);
 }
 
-i{
+i:not(.fa-twitter){
     font-size: 1.5rem;
-    color: #17a2b8;
+    color: #19a5d0;
     transition: all 0.3s ease 0s;
 }
+
 i:hover{
     cursor: pointer;
     transform: scale(1.2, 1.2);
@@ -138,6 +143,7 @@ ul{
 // footer
 footer{
     position: absolute;
+    font-size: 0.9rem;
     bottom: 0;
     width: 100%;
     height: 6rem;

@@ -1,9 +1,9 @@
 class DiariesController < ApplicationController
   before_action :set_diary, only: %i[edit update destroy]
-  skip_before_action :require_login, only: %i[show]
+  skip_before_action :require_login, only: %i[show index]
 
   def index
-    @diaries = current_user.diaries.order(created_at: :desc)
+    @diaries = Diary.includes(:user).order(created_at: :desc)
   end
 
   def new

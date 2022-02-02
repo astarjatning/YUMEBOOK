@@ -1,6 +1,6 @@
 .container
   .row
-    .col-md-8.offset-md-2.col-lg-8.offset-lg-2.mt-5
+    .col-lg-8.offset-lg-2.col-md-10.offset-md-1.col-sm-12.col-11.offset-1.text-center.mt-3
       - if @diaries.present?
         - @diaries.each do |diary|
           .latest.d-flex.flex-column
@@ -14,6 +14,3 @@
       - else
         p.my-5
           = t('.no_post')
-    .col-md-8.offset-md-2.col-lg-8.offset-lg-2.mt-3
-       = link_to :back, class: 'active-link' do
-        .back.i.fas.fa-hand-point-left

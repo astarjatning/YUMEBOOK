@@ -1,11 +1,12 @@
 .container
   .row
-    .col-md-8.offset-md-2.col-lg-8.offset-lg-2.mt-5
+    .col-lg-8.offset-lg-2.col-md-10.offset-md-1.col-sm-12.col-11.offset-1.text-center
       - if @diaries.present?
         - @diaries.each do |diary|
           .latest.d-flex.flex-column
             .avatar-icon
-              = image_tag diary.user.avatar.url, class: 'rounded-circle mr15', size: '60x60'
+              = link_to "/#{diary.user.name}" do
+                = image_tag diary.user.avatar.url, class: 'rounded-circle', size: '60x60'
             .latest-dream
               = link_to(diary_path(diary), class:'active-link', style: 'color:black;') do
                 = diary.title
@@ -14,6 +15,3 @@
       - else
         p.my-5
           = t('.no_post')
-    cursor: pointer;
-        transform: scale(1.1, 1.1);
-        text-decoration:none !important;
