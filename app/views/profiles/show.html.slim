@@ -1,6 +1,6 @@
 .container
   .row
-    .profile-field.col-md-6.offset-md-3.col-lg-6.offset-lg-3.mt-5
+    .profile-field.col-lg-6.offset-lg-3.col-md-8.offset-md-2.col-sm-10.offset-sm-1.col-10.offset-1.mt-5
       .float-right.mb-3
         = link_to edit_profile_path do
           i.fas.fa-edit.mr-3
@@ -16,7 +16,5 @@
         th scope="row"
           = t(User.human_attribute_name(:avatar))
         td= image_tag @user.avatar.url, class: 'rounded-circle mr15', size: '50x50'
-    .col-md-8.offset-md-2.col-lg-8.offset-lg-2.mt-3
-       = link_to diaries_path do
-        .back.i.fas.fa-hand-point-left
+
     

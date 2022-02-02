@@ -1,10 +1,11 @@
 .container
   .title-text.row
-    .col-lg-6.offset-lg-3.col-md-8.offset-md-2.mt-5.text-center
+    .col-lg-6.offset-lg-3.col-md-8.offset-md-2.col-sm-12.col-12.mt-5.text-center
       h1.title-text.text-center
-        = t('.title')
-  .row.mt-5
-    .col-lg-8.offset-lg-2.col-md-8.offset-md-2.text-center
+        span
+          = t('.title')
+  .row
+    .col-lg-8.offset-lg-2.col-md-10.offset-md-1.col-sm-12.col-11.offset-1.text-center.mt-5
       p.i.fas.fa-bed
         = t('.new_posts')
       - if @diaries.present?
@@ -21,9 +22,10 @@
       - else
         p = t('.no_post')
   .row.mt-5
-    .col-lg-6.offset-lg-3.col-md-8.offset-md-2.col-md-8.offset-md-2.mt-5.text-center
-      - if logged_in?
-        = link_to t('.new_post'), new_diary_path, class: 'active-link', style: 'color:black;'
-      - else
-        = link_to t('.new_post'), new_user_path, class: 'active-link', style: 'color:black;'
-          
+    .col-lg-6.offset-lg-3.col-md-8.offset-md-2.col-md-8.offset-md-2.col-sm-12.col-12.mt-5.text-center
+      .d-flex.justify-content-around
+        - if logged_in?
+          = link_to t('.try_post'), new_diary_path, class: 'toppage-item', style: 'color:black;'
+        - else
+          = link_to t('.try_post'), new_user_path, class: 'toppage-item', style: 'color:black;'
+        = link_to t('.more_posts'), diaries_path, class: 'toppage-item', style: 'color:black;'

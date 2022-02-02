@@ -1,37 +1,31 @@
 h1.title-text{
-    font-family: 'Futura';
-    font-size: 30px;
+    font-size: 2rem;
     font-weight: 900;
     padding-top: 2rem;
-    color: black;
-    text-shadow: 
-        50px 0px 5px #ffffff,
-        -0px 30px 5px #ffffff,
-        30px -30px 5px #ffffff,
-        -30px -10px 5px #ffffff,
-        30px 20px 5px #ffffff,
-        50px 30px 5px #ffffff,
-        -20px 0px 5px #ffffff,
-        10px -30px 5px #ffffff;
+    color: #fff000;
+    background-color: #19a5d0;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
     }
+    
     p{
         text-align: center;
         text-shadow: 
-        10px  10px 5px #ffffff,
-        -10px  10px 5px #ffffff,
-        10px -10px 5px #ffffff,
-        -10px -10px 5px #ffffff,
-        10px  0px 5px #ffffff,
-        0px  10px 5px #ffffff,
-        -10px  0px 5px #ffffff,
-        0px -10px 5px #ffffff; 
+            5px  5px 0px #ffffff,
+            -5px  5px 0px #ffffff,
+            5px -5px 0px #ffffff,
+            -5px -5px 0px #ffffff,
+            5px  0px 0px #ffffff,
+            0px  5px 0px #ffffff,
+            -5px  0px 0px #ffffff,
+            0px -5px 0px #ffffff; 
     }
 
 .latest {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 115%;
     position: relative;
     margin: 1rem auto;
     
@@ -58,7 +52,7 @@ h1.title-text{
         margin-bottom: 0.5rem;
         padding: 20px 20px;
         min-width: 100px;
-        max-width: 70%;
+        max-width: 90%;
         color: #333;
         font-size: 16px;
         background: #fff;
@@ -67,11 +61,11 @@ h1.title-text{
         border-radius: 12px;
         width: 65%;
         transition: all 0.3s ease 0s;
+        box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .582);
     }
     .latest-dream:hover{
         cursor: pointer;
         transform: scale(1.05, 1.05);
-        text-decoration:none !important;
     }
     .latest-dream:before{
         content: "";
@@ -97,4 +91,21 @@ h1.title-text{
         margin: 0;
         padding: 0;
     }
+}
+
+.toppage-item{
+    border: solid 5px #333;
+    box-sizing: border-box;
+    border-radius: 12px;
+    background-color: white;
+    padding: 0.5rem;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.582);
+    transition: all 0.3s ease 0s;
+    display: block;
+}
+
+.toppage-item:hover{
+    cursor: pointer;
+    transform: scale(1.05, 1.05);
+    text-decoration:none;
 }
