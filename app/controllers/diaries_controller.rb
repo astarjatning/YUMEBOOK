@@ -3,7 +3,7 @@ class DiariesController < ApplicationController
   skip_before_action :require_login, only: %i[show index]
 
   def index
-    @diaries = Diary.includes(:user).order(created_at: :desc)
+    @diaries = Diary.includes(:user).page(params[:page]).order(created_at: :desc)
   end
 
   def new

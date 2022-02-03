@@ -56,6 +56,12 @@ ja:
       submit: '更新'
     update: 
       success: 'プロフィールを更新しました'
+  views:
+    pagination:
+        first: "<<"
+        last: ">>"
+        previous: "<"
+        next: ">"
 
 
   

@@ -20,7 +20,7 @@ h1{
     color: black;
 }
 
-// header
+/* header */
 .navbar{
     background-image: url("../images/p_pt_0256_m_pt_02563.png");
     text-decoration: black;
@@ -43,31 +43,31 @@ h1{
             -5px  0px 0px #ffffff,
             0px -5px 0px #ffffff;  
         }
-        .navbar-nav:not(.nav-item li){
+        .navbar-nav{
             text-shadow: 
-                5px  5px 0px #ffffff,
-                -5px  5px 0px #ffffff,
-                5px -5px 0px #ffffff,
-                -5px -5px 0px #ffffff,
-                5px  0px 0px #ffffff,
-                0px  5px 0px #ffffff,
-                -5px  0px 0px #ffffff,
-                0px -5px 0px #ffffff;  
-
+            5px  5px 0px #ffffff,
+            -5px  5px 0px #ffffff,
+            5px -5px 0px #ffffff,
+            -5px -5px 0px #ffffff,
+            5px  0px 0px #ffffff,
+            0px  5px 0px #ffffff,
+            -5px  0px 0px #ffffff,
+            0px -5px 0px #ffffff;  
+            
+            .nav-item{
+                margin-right: 3rem;
+                margin-top: 1rem;
+                transition: all 0.3s ease 0s;
+            }
+            .nav-item:hover{
+                cursor: pointer;
+                transform: scale(1.2, 1.2);
+            }
     }
     .nav-link{
         text-decoration: none;
         color: black;
         font-weight: 700;
-    }
-    .nav-item{
-        transition: all 0.3s ease 0s;
-        margin-right: 3rem;
-        margin-top: 1rem;
-    }
-    .nav-item:hover{
-        cursor: pointer;
-        transform: scale(1.1, 1.1);
     }
     .avatar-icon{
         border: solid 2px #333;
@@ -83,7 +83,7 @@ h1{
     }
 }
 
-// リンクとかアイコン
+/* リンクとかアイコン */
 .back{
     font-size: 2.5rem;
     color: black;
@@ -114,11 +114,6 @@ i:hover{
     text-decoration:none !important;
 }
 
-ul{
-    margin:0;
-    padding:0;
-}
-
 .profile-field{
     background-color: white;
     border: solid 5px #333;
@@ -140,7 +135,39 @@ ul{
     }
 }
 
-// footer
+/*ページネーション*/
+.pagination{
+      display: flex;
+      justify-content: center !important;
+      margin-top: 1.5rem;
+}
+.pagination>li>a {          
+      border: none;     /*枠線をなくす*/
+      color: #3a3838;   /*文字の色を変える*/
+      background-color:  #19a5d07c;
+      border-radius: 20px !important;
+      margin: 0.3rem;
+  }
+  
+  /* 表示しているページ番号のデザイン */
+  .pagination>.active>a {     
+      background: #93c9ff;     /*背景の色を変える*/
+      border-radius: 20px;     /*角を丸くする*/
+  }
+  
+  /*ホバー時のデザイン*/
+  .pagination>li>a:hover {        
+      border-radius: 15px; 
+      color: black;   /*角を丸くする*/
+  }
+
+  .page-item.active .page-link{
+      background-color: #1bc2dd;
+      background-color: #1bc2dd;
+      color: #dee2e6;
+  }
+
+/* footer */
 footer{
     position: absolute;
     font-size: 0.9rem;
