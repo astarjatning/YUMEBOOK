@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   def show
     user = User.find_by(name: params[:name])
-    @diaries = user.diaries.order(created_at: :desc)
+    @diaries = user.diaries.page(params[:page]).order(created_at: :desc)
   end
 
   def new

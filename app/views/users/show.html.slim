@@ -1,6 +1,6 @@
 .container
   .row
-    .col-lg-8.offset-lg-2.col-md-10.offset-md-1.col-sm-12.col-11.offset-1.text-center.mt-3
+    .col-lg-8.offset-lg-2.col-md-10.offset-md-1.col-sm-12.col-11.offset-1.text-center.mt-5
       - if @diaries.present?
         - @diaries.each do |diary|
           .latest.d-flex.flex-column
@@ -14,3 +14,5 @@
       - else
         p.my-5
           = t('.no_post')
+    .col-lg-4.offset-lg-4.col-md-4.offset-md-4.col-sm-4.offset-sm-4.col-12.text-center.mt-5
+      = paginate @diaries
