@@ -2,10 +2,10 @@ h1.title-text{
     font-size: 2rem;
     font-weight: 900;
     padding-top: 2rem;
-    color: #fff000;
-    background-color: #19a5d0;
+    background: #fff;
+    border: solid 5px #333;
     border-radius: 14px;
-    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+    box-shadow: 10px 10px 5px #39393980;
     }
     
     p{
@@ -28,6 +28,7 @@ h1.title-text{
     width: 115%;
     position: relative;
     margin: 1rem auto;
+    align-items: center;
     
     .avatar-icon{
         max-width: 100%;
@@ -61,7 +62,7 @@ h1.title-text{
         border-radius: 12px;
         width: 65%;
         transition: all 0.3s ease 0s;
-        box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .582);
+        box-shadow: 10px 10px 5px #39393980;
     }
     .latest-dream:hover{
         cursor: pointer;
@@ -99,7 +100,7 @@ h1.title-text{
     border-radius: 12px;
     background-color: white;
     padding: 0.5rem;
-    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.582);
+    box-shadow: 10px 10px 5px #39393980;
     transition: all 0.3s ease 0s;
     display: block;
 }

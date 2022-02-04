@@ -1,11 +1,11 @@
 header
   nav.navbar.navbar-expand-lg.navigation.p-1
-    = link_to t('defaults.app_title'), root_path, class: 'active-link navbar-brand', style: 'color:black;'
+    = link_to t('defaults.app_title'), root_path, class: 'active-link navbar-brand'
     button.navbar-toggler aria-controls="navbarSupportedContent" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarSupportedContent" data-toggle="collapse" 
       span.navbar-toggler-icon
     #navbarSupportedContent.collapse.navbar-collapse
       .navbar-nav.container-fluid.justify-content-end
         .nav-item
-          = link_to t('defaults.login'), login_path, class: 'active-link', style: 'color:black;'
+          = link_to t('defaults.login'), login_path, class: 'active-link'
         .nav-item
-          = link_to t('defaults.register'), new_user_path, class: 'active-link', style: 'color:black;'
+          = link_to t('defaults.register'), new_user_path, class: 'active-link'

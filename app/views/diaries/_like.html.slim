@@ -1,4 +1,4 @@
-- if current_user.liked?(diary)
+- if logged_in? && current_user.liked?(diary)
   = link_to destroy_like_path(diary), method: :delete, remote: true, class: 'active-link' do
     i.fas.fa-heart.liked
   = diary.likes.count

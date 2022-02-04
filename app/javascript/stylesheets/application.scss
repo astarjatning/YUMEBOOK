@@ -19,6 +19,12 @@ h1{
     padding-bottom: 2rem;
     color: black;
 }
+a {
+    color: black;
+}
+a:hover{
+    color: black;
+}
 
 /* header */
 .navbar{
@@ -61,7 +67,7 @@ h1{
             }
             .nav-item:hover{
                 cursor: pointer;
-                transform: scale(1.2, 1.2);
+                transform: scale(1.1, 1.1);
             }
     }
     .nav-link{
@@ -136,9 +142,11 @@ i:hover{
 }
 /* リアクションボタン */
 
-ul {
+ul.reactions {
     text-decoration:none !important;
     list-style-type: none;
+    padding-left: 0 !important;
+    font-weight: normal;
 }
 
 i.fas.fa-heart.liked{
@@ -165,6 +173,13 @@ i.fas.fa-flushed.surprised{
 i.fas.fa-flushed.to-surprise{
     color: #A0A0A0;
 }
+i.fas.fa-paw.pawed{
+    color: #009900;
+}
+i.fas.fa-paw.to-paw{
+    color: #A0A0A0;
+}
+
 /*ページネーション*/
 .pagination{
       display: flex;

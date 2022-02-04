@@ -1,0 +1,8 @@
+- if logged_in? && current_user.pawed?(diary)
+  = link_to destroy_paw_path(diary), method: :delete, remote: true, class: 'active-link' do
+    i.fas.fa-paw.pawed
+  = diary.paws.count
+- else
+  = link_to create_paw_path(diary), method: :post, remote:true, class: 'active-link' do
+    i.fas.fa-paw.to-paw
+  = diary.paws.count if diary.paws.any?

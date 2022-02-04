@@ -8,6 +8,8 @@ class User < ApplicationRecord
   has_many :griefs, dependent: :destroy
   has_many :cries, dependent: :destroy
   has_many :surprises, dependent: :destroy
+  has_many :paws, dependent: :destroy
+
 
   enum role: { general: 0, admin: 1 }
 
@@ -31,5 +33,9 @@ class User < ApplicationRecord
   def surprised?(diary)
     surprises.where(diary_id: diary.id).exists?
   end
-    
+
+  def pawed?(diary)
+    paws.where(diary_id: diary.id).exists?
+  end
+
 end

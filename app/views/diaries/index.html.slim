@@ -8,19 +8,12 @@
               = link_to "/#{diary.user.name}" do
                 = image_tag diary.user.avatar.url, class: 'rounded-circle', size: '60x60'
             .latest-dream
-              = link_to(diary_path(diary), class:'active-link', style: 'color:black;') do
+              = link_to(diary_path(diary), class:'active-link') do
                 = diary.title
                 br
                 = diary.story
-              ul.reactions.d-flex.mt-3
-                li.*{id: "like_#{diary.id}"}
-                  = render 'like', diary: diary
-                li.ml-3.*{id: "laugh_#{diary.id}"}
-                  = render 'laugh', diary: diary
-                li.ml-3.*{id: "cry_#{diary.id}"}
-                  = render 'cry', diary: diary
-                li.ml-3.*{id: "surprise_#{diary.id}"}
-                  = render 'surprise', diary: diary
+              ul.reactions.d-flex.justify-content-center.mt-3
+                = render 'reactions', diary: diary
       - else
         p.my-5
           = t('.no_post')

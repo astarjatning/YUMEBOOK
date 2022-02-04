@@ -1,4 +1,4 @@
-- if current_user.laughed?(diary)
+- if logged_in? && current_user.laughed?(diary)
   = link_to destroy_laugh_path(diary), method: :delete, remote: true, class: 'active-link' do
     i.fas.fa-grin-squint-tears.laughed
   = diary.laughs.count

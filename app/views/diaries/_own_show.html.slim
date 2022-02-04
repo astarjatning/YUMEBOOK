@@ -1,0 +1,21 @@
+      ul.list-inline.float-right
+        li.list-inline-item
+          = link_to edit_diary_path(@diary) do
+            i.fas.fa-edit.mr-3
+        li.list-inline-item
+          = link_to diary_path(@diary), method: :delete, data: { confirm: '削除しますか？' } do
+            i.fas.fa-trash-alt.mr-3
+      .dream-title.d-inline
+        = link_to "/#{@diary.user.name}" do
+          = image_tag @diary.user.avatar.url, class: 'avatar-icon rounded-circle mr15', size: '50x50'
+        = @diary.title
+      table.table
+        tr
+          th scope="row"
+          td= @diary.story
+      ul.reactions.d-flex.float-left.ml-3.mt-3
+        = render 'reactions', diary: diary
+      .active-link.float-right
+        = link_to "https://twitter.com/share?url=#{ request.url }&text=今日こんなゆめ見ました%0a「#{ @diary.title }」%0a&hashtags=YUMEBOOK", class: 'btn btn-info', target: '_blank' do
+          i.fab.fa-twitter
+          |  Twitter
