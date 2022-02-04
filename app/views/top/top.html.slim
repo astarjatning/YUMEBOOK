@@ -24,6 +24,10 @@
                   = render 'diaries/like', diary: diary
                 li.ml-3.*{id: "laugh_#{diary.id}"}
                   = render 'diaries/laugh', diary: diary
+                li.ml-3.*{id: "cry_#{diary.id}"}
+                  = render 'diaries/cry', diary: diary
+                li.ml-3.*{id: "surprise_#{diary.id}"}
+                  = render 'diaries/surprise', diary: diary
       - else
         p = t('.no_post')
   .row.mt-5

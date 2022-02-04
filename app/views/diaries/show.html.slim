@@ -24,6 +24,8 @@
           = render 'laugh', diary: @diary
         li.ml-3.*{id: "cry_#{@diary.id}"}
           = render 'cry', diary: @diary
+        li.ml-3.*{id: "surprise_#{@diary.id}"}
+          = render 'surprise', diary: @diary
       - if logged_in? && @diary.user_id == current_user.id
         .active-link.float-right
           = link_to "https://twitter.com/share?url=#{ request.url }&text=今日こんなゆめ見ました%0a「#{ @diary.title }」%0a&hashtags=YUMEBOOK", class: 'btn btn-info', target: '_blank' do

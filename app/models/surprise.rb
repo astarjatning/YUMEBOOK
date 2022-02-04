@@ -1,4 +1,4 @@
-class Like < ApplicationRecord
+class Surprise < ApplicationRecord
   belongs_to :user
   belongs_to :diary
 

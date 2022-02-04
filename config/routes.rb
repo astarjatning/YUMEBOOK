@@ -19,4 +19,6 @@ Rails.application.routes.draw do
   delete 'laugh/:id', to: 'laughs#destroy', as: 'destroy_laugh'
   post 'cry/:id', to: 'cries#create', as: 'create_cry'
   delete 'cry/:id', to: 'cries#destroy', as: 'destroy_cry'
+  post 'surprise/:id', to: 'surprises#create', as: 'create_surprise'
+  delete 'surprise/:id', to: 'surprises#destroy', as: 'destroy_surprise'
 end
