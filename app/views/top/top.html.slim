@@ -15,17 +15,19 @@
               = link_to "/#{diary.user.name}" do
                 = image_tag diary.user.avatar.url, class: 'rounded-circle', size: '60x60'
             .latest-dream
-              = link_to(diary_path(diary), class: 'active-link', style: 'color:black;') do
+              = link_to(diary_path(diary), class: 'active-link') do
                 = diary.title
                 br
                 = diary.story
+              ul.reactions.d-flex.justify-content-center.mt-3
+                = render 'diaries/reactions', diary: diary
       - else
         p = t('.no_post')
   .row.mt-5
     .col-lg-6.offset-lg-3.col-md-8.offset-md-2.col-md-8.offset-md-2.col-sm-12.col-12.mt-5.text-center
       .d-flex.justify-content-around
         - if logged_in?
-          = link_to t('.try_post'), new_diary_path, class: 'toppage-item', style: 'color:black;'
+          = link_to t('.try_post'), new_diary_path, class: 'toppage-item'
         - else
-          = link_to t('.try_post'), new_user_path, class: 'toppage-item', style: 'color:black;'
-        = link_to t('.more_posts'), diaries_path, class: 'toppage-item', style: 'color:black;'
+          = link_to t('.try_post'), new_user_path, class: 'toppage-item'
+        = link_to t('.more_posts'), diaries_path, class: 'toppage-item'

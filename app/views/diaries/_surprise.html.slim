@@ -1,0 +1,8 @@
+- if logged_in? && current_user.surprised?(diary)
+  = link_to destroy_surprise_path(diary), method: :delete, remote: true, class: 'active-link' do
+    i.fas.fa-flushed.surprised
+  = diary.surprises.count
+- else
+  = link_to create_surprise_path(diary), method: :post, remote:true, class: 'active-link' do
+    i.fas.fa-flushed.to-surprise
+  = diary.surprises.count if diary.surprises.any?

@@ -18,7 +18,7 @@
           .text-center.my-3
             = image_tag @user.avatar.url, class: 'rounded-circle', id: 'preview', size: '100x100'
         .actions.text-center
-          = f.submit t('.submit'), class: 'btn btn-info my-3'
+          = f.submit t('.submit'), class: 'active-link btn btn-info my-3'
     .col-lg-6.offset-lg-3.col-md-8.offset-md-2.col-sm-10.offset-sm-1.col-10.offset-1.mt-3
        = link_to profile_path do
         .back.i.fas.fa-hand-point-left

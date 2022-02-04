@@ -19,6 +19,12 @@ h1{
     padding-bottom: 2rem;
     color: black;
 }
+a {
+    color: black;
+}
+a:hover{
+    color: black;
+}
 
 /* header */
 .navbar{
@@ -61,7 +67,7 @@ h1{
             }
             .nav-item:hover{
                 cursor: pointer;
-                transform: scale(1.2, 1.2);
+                transform: scale(1.1, 1.1);
             }
     }
     .nav-link{
@@ -133,6 +139,45 @@ i:hover{
             transform: scale(1.1, 1.1);
         }
     }
+}
+/* リアクションボタン */
+
+ul.reactions {
+    text-decoration:none !important;
+    list-style-type: none;
+    padding-left: 0 !important;
+    font-weight: normal;
+}
+
+i.fas.fa-heart.liked{
+    color:#c71585;
+}
+i.fas.fa-heart.to-like{
+    color:#A0A0A0;
+}
+i.fas.fa-grin-squint-tears.laughed{
+    color:#ffc107;
+}
+i.fas.fa-grin-squint-tears.to-laugh{
+    color:#A0A0A0;
+}
+i.fas.fa-tired.cried{
+    color: #0099FF;
+}
+i.fas.fa-tired.to-cry{
+    color: #A0A0A0;
+}
+i.fas.fa-flushed.surprised{
+    color: #6600CC;
+}
+i.fas.fa-flushed.to-surprise{
+    color: #A0A0A0;
+}
+i.fas.fa-paw.pawed{
+    color: #009900;
+}
+i.fas.fa-paw.to-paw{
+    color: #A0A0A0;
 }
 
 /*ページネーション*/

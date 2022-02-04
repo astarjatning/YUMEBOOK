@@ -13,4 +13,19 @@ Rails.application.routes.draw do
     end
   end
   get ':name', to: 'users#show'
+
+  post 'like/:id', to: 'likes#create', as: 'create_like'
+  delete 'like/:id', to: 'likes#destroy', as: 'destroy_like'
+
+  post 'laugh/:id', to: 'laughs#create', as: 'create_laugh'
+  delete 'laugh/:id', to: 'laughs#destroy', as: 'destroy_laugh'
+
+  post 'cry/:id', to: 'cries#create', as: 'create_cry'
+  delete 'cry/:id', to: 'cries#destroy', as: 'destroy_cry'
+
+  post 'surprise/:id', to: 'surprises#create', as: 'create_surprise'
+  delete 'surprise/:id', to: 'surprises#destroy', as: 'destroy_surprise'
+
+  post 'paw/:id', to: 'paws#create', as: 'create_paw'
+  delete 'paw/:id', to: 'paws#destroy', as: 'destroy_paw'
 end

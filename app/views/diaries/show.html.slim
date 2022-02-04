@@ -2,23 +2,15 @@
   .row
     .profile-field.col-lg-6.offset-lg-3.col-md-8.offset-md-2.col-sm-10.offset-sm-1.col-10.offset-1.mt-5
       - if logged_in? && @diary.user_id == current_user.id
-        ul.list-inline.float-right
-          li.list-inline-item
-            = link_to edit_diary_path(@diary) do
-              i.fas.fa-edit.mr-3
-          li.list-inline-item
-            = link_to diary_path(@diary), method: :delete, data: { confirm: '削除しますか？' } do
-              i.fas.fa-trash-alt.mr-3
-      .dream-title.d-inline
-        = link_to "/#{@diary.user.name}" do
-          = image_tag @diary.user.avatar.url, class: 'avatar-icon rounded-circle mr15', size: '50x50'
-        = @diary.title
-      table.table
-        tr
-          th scope="row"
-          td= @diary.story
-      - if logged_in? && @diary.user_id == current_user.id
-        .active-link.float-right
-          = link_to "https://twitter.com/share?url=#{ request.url }&text=今日こんなゆめ見ました%0a「#{ @diary.title }」%0a&hashtags=YUMEBOOK", class: 'btn btn-info', target: '_blank' do
-            i.fab.fa-twitter
-            |  Twitter
+        = render 'own_show', diary: @diary
+      - else
+        .dream-title.d-inline
+          = link_to "/#{@diary.user.name}" do
+            = image_tag @diary.user.avatar.url, class: 'avatar-icon rounded-circle mr15', size: '50x50'
+          = @diary.title
+        table.table
+          tr
+            th scope="row"
+            td= @diary.story
+        ul.reactions.d-flex.justify-content-center.mt-5
+          = render 'reactions', diary: @diary

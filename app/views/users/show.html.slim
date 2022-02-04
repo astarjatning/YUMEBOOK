@@ -5,12 +5,14 @@
         - @diaries.each do |diary|
           .latest.d-flex.flex-column
             .avatar-icon
-              = image_tag diary.user.avatar.url, class: 'active-link rounded-circle mr15', size: '60x60'
+              = image_tag diary.user.avatar.url, class: 'rounded-circle mr15', size: '60x60'
             .latest-dream
-              = link_to(diary_path(diary), class: 'active-link', style: 'color:black;') do
+              = link_to(diary_path(diary), class: 'active-link') do
                 = diary.title
                 br
                 = diary.story
+              ul.reactions.d-flex.justify-content-center.mt-3
+                = render 'diaries/reactions', diary: diary
       - else
         p.my-5
           = t('.no_post')
