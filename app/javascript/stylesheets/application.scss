@@ -134,6 +134,26 @@ i:hover{
         }
     }
 }
+/* リアクションボタン */
+
+ul {
+    text-decoration:none !important;
+    list-style-type: none;
+}
+
+i.fas.fa-heart.liked{
+    color:#c71585;
+}
+i.fas.fa-heart.to-like{
+    color:#A0A0A0;
+}
+i.fas.fa-grin-squint-tears.laughed{
+    color:#ffc107;
+}
+i.fas.fa-grin-squint-tears.to-laugh{
+    color:#A0A0A0;
+}
+
 
 /*ページネーション*/
 .pagination{

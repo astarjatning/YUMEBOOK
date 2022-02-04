@@ -1,5 +1,5 @@
 class LikesController < ApplicationController
-    before_action :diary_params
+  before_action :diary_params
 
   def create
     current_user.likes.create(diary_id: params[:id])

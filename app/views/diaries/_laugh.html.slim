@@ -1,0 +1,8 @@
+- if current_user.laughed?(diary)
+  = link_to destroy_laugh_path(diary), method: :delete, remote: true, class: 'active-link' do
+    i.fas.fa-grin-squint-tears.laughed
+  = diary.laughs.count
+- else
+  = link_to create_laugh_path(diary), method: :post, remote:true, class: 'active-link' do
+    i.fas.fa-grin-squint-tears.to-laugh
+  = diary.laughs.count if diary.laughs.any?

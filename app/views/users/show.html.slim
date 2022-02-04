@@ -11,6 +11,11 @@
                 = diary.title
                 br
                 = diary.story
+              ul.reactions.d-flex.mt-3
+                li.*{id: "like_#{diary.id}"}
+                  = render 'diaries/like', diary: diary
+                li.ml-3.*{id: "laugh_#{diary.id}"}
+                  = render 'diaries/laugh', diary: diary
       - else
         p.my-5
           = t('.no_post')

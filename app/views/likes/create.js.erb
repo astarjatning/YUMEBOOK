@@ -1,1 +1,1 @@
-document.getElementById('diary_<%= @diary.id %>').innerHTML = '<%= j(render 'diaries/likes', diary: @diary) %>';
+document.getElementById('like_<%= @diary.id %>').innerHTML = '<%= j(render 'diaries/like', diary: @diary) %>';
