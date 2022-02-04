@@ -1,0 +1,8 @@
+- if current_user.liked?(diary)
+  = link_to destroy_like_path(diary), method: :delete, remote: true, class: 'active-link' do
+    i.fas.fa-heart style='color: #c71585;'
+  = diary.likes.count
+- else
+  = link_to create_like_path(diary), method: :post, remote:true, class: 'active-link' do
+    i.fas.fa-heart style='color: #A0A0A0;'
+  = diary.likes.count if diary.likes.any?

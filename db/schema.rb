@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_27_093814) do
+ActiveRecord::Schema.define(version: 2022_02_03_043422) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,16 @@ ActiveRecord::Schema.define(version: 2022_01_27_093814) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "likes", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "diary_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["diary_id"], name: "index_likes_on_diary_id"
+    t.index ["user_id", "diary_id"], name: "index_likes_on_user_id_and_diary_id", unique: true
+    t.index ["user_id"], name: "index_likes_on_user_id"
+  end
+
   create_table "meanings", force: :cascade do |t|
     t.bigint "keyword_id", null: false
     t.bigint "connotation_id", null: false
@@ -72,6 +82,8 @@ ActiveRecord::Schema.define(version: 2022_01_27_093814) do
   add_foreign_key "addings", "diaries"
   add_foreign_key "addings", "keywords"
   add_foreign_key "diaries", "users"
+  add_foreign_key "likes", "diaries"
+  add_foreign_key "likes", "users"
   add_foreign_key "meanings", "connotations"
   add_foreign_key "meanings", "keywords"
 end
