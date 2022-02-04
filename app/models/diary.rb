@@ -4,6 +4,7 @@ class Diary < ApplicationRecord
   has_many :keywords, through: :addings
   has_many :likes, dependent: :destroy
   has_many :laughs, dependent: :destroy
+  has_many :cries, dependent: :destroy
 
   validates :title, presence: true
   validates :story, presence: true
