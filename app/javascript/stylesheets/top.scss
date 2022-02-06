@@ -1,25 +1,19 @@
 h1.title-text{
-    font-size: 2rem;
     font-weight: 900;
     padding-top: 2rem;
     background: #fff;
+    font-size: 1.2rem;
     border: solid 5px #333;
     border-radius: 14px;
     box-shadow: 10px 10px 5px #39393980;
-    }
-    
-    p{
-        text-align: center;
-        text-shadow: 
-            5px  5px 0px #ffffff,
-            -5px  5px 0px #ffffff,
-            5px -5px 0px #ffffff,
-            -5px -5px 0px #ffffff,
-            5px  0px 0px #ffffff,
-            0px  5px 0px #ffffff,
-            -5px  0px 0px #ffffff,
-            0px -5px 0px #ffffff; 
-    }
+}
+
+.latest-text{
+    text-align: center;
+    background-color: rgba(245, 245, 245, 0.623);
+    border-radius: 15px;
+    margin-right: 2rem;
+}
 
 .latest {
     display: flex;
@@ -51,7 +45,7 @@ h1.title-text{
         position: relative;
         display: inline-block;
         margin-bottom: 0.5rem;
-        padding: 20px 20px;
+        padding: 20px 20px 5px 30px;
         min-width: 100px;
         max-width: 90%;
         color: #333;
@@ -60,7 +54,7 @@ h1.title-text{
         border: solid 5px #333;
         box-sizing: border-box;
         border-radius: 12px;
-        width: 65%;
+        width: 78%;
         transition: all 0.3s ease 0s;
         box-shadow: 10px 10px 5px #39393980;
     }
@@ -87,6 +81,7 @@ h1.title-text{
         border: 14px solid transparent;
         border-right: 14px solid #333;
         z-index: 1;
+        pointer-events: auto;
     }
     .latest-dream p {
         margin: 0;

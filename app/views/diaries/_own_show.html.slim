@@ -9,10 +9,12 @@
         = link_to "/#{@diary.user.name}" do
           = image_tag @diary.user.avatar.url, class: 'avatar-icon rounded-circle mr15', size: '50x50'
         = @diary.title
+      .datetime.align-self-end.d-flex.justify-content-end
+        = l @diary.created_at, format: :long
       table.table
         tr
           th scope="row"
-          td= @diary.story
+          td= simple_format(@diary.story)
       ul.reactions.d-flex.float-left.ml-3.mt-3
         = render 'reactions', diary: diary
       .active-link.float-right

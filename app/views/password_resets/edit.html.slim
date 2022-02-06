@@ -1,0 +1,17 @@
+.container
+  .row
+    .profile-field.col-lg-6.offset-lg-3.col-md-8.offset-md-2.col-sm-10.offset-sm-1.col-10.offset-1.mt-5
+      h1= t('.title')
+      = form_with model: @user, url: password_reset_path(@token), local: true do |f|
+        = render 'shared/error_messages', object: f.object
+        .form-group
+          = f.label :email
+          = @user.email
+        .form-group
+          = f.label :password
+          = f.password_field :password, class: 'form-control'
+        .form-group
+          = f.label :password_confirmation
+          = f.password_field :password_confirmation, class: 'form-control'
+        .actions.text-center
+          = f.submit t('.submit'), class: 'active-link btn btn-info my-3'

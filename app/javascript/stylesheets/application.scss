@@ -1,10 +1,11 @@
 @import '../../../node_modules/bootstrap/scss/bootstrap';
-@import 'flatpickr/dist/flatpickr.css';
 @import 'top';
 @import 'toastr/build/toastr.min';
 @import '@fortawesome/fontawesome-free/scss/fontawesome';
+@import url('https://fonts.googleapis.com/css2?family=Kosugi&family=Rampart+One&display=swap');
 
 body{
+    font-family: 'Kosugi', sans-serif;
     color: black;
     font-weight: 800;
     width: 100%;
@@ -13,7 +14,7 @@ body{
     background-image: url("../images/p_pt_0256_m_pt_02563.png");
 }
 h1{
-    font-size: 30px;
+    font-size: 1.5rem;
     font-weight: 900;
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -26,6 +27,7 @@ a:hover{
     color: black;
 }
 
+
 /* header */
 .navbar{
     background-image: url("../images/p_pt_0256_m_pt_02563.png");
@@ -34,36 +36,35 @@ a:hover{
     max-width: 100%;
     
     .navbar-brand{
-        font-family: 'Futura';
+        font-family: 'Rampart One';
         font-weight: 900;
-        margin-left: 3rem;
+        margin-left: 2rem;
         text-decoration: none;    
         font-size: 2.1rem;
         text-shadow: 
-            5px  5px 0px #ffffff,
-            -5px  5px 0px #ffffff,
-            5px -5px 0px #ffffff,
-            -5px -5px 0px #ffffff,
-            5px  0px 0px #ffffff,
-            0px  5px 0px #ffffff,
-            -5px  0px 0px #ffffff,
-            0px -5px 0px #ffffff;  
+       4px  4px 1px #ffffff,
+      -4px  4px 1px #ffffff,
+       4px -4px 1px #ffffff,
+      -4px -4px 1px #ffffff,
+       4px  0px 1px #ffffff,
+       0px  4px 1px #ffffff,
+      -4px  0px 1px #ffffff,
+       0px -4px 1px #ffffff; 
         }
         .navbar-nav{
-            text-shadow: 
-            5px  5px 0px #ffffff,
-            -5px  5px 0px #ffffff,
-            5px -5px 0px #ffffff,
-            -5px -5px 0px #ffffff,
-            5px  0px 0px #ffffff,
-            0px  5px 0px #ffffff,
-            -5px  0px 0px #ffffff,
-            0px -5px 0px #ffffff;  
-            
             .nav-item{
                 margin-right: 3rem;
                 margin-top: 1rem;
                 transition: all 0.3s ease 0s;
+                text-shadow: 
+                    4px  4px 1px #ffffff,
+                    -4px  4px 1px #ffffff,
+                    4px -4px 1px #ffffff,
+                    -4px -4px 1px #ffffff,
+                    4px  0px 1px #ffffff,
+                    0px  4px 1px #ffffff,
+                    -4px  0px 1px #ffffff,
+                    0px -4px 1px #ffffff; 
             }
             .nav-item:hover{
                 cursor: pointer;
@@ -80,13 +81,18 @@ a:hover{
         border-radius: 50%;
     }   
     .navbar-toggler{
-        border-color: black;
+        border: solid 3px #333;
+        border-radius: 12px;
         background-color: white;
         box-sizing: border-box;
         .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(0,0,0)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
         }
     }
+}
+
+.datetime{
+    font-weight: 200;
 }
 
 /* リンクとかアイコン */
@@ -147,6 +153,7 @@ ul.reactions {
     list-style-type: none;
     padding-left: 0 !important;
     font-weight: normal;
+    font-size: 0.5rem;
 }
 
 i.fas.fa-heart.liked{
@@ -178,6 +185,14 @@ i.fas.fa-paw.pawed{
 }
 i.fas.fa-paw.to-paw{
     color: #A0A0A0;
+}
+
+/* パスワードリセット */
+.password-reset p{
+    text-align: left;
+    font-weight: 200;
+    line-height: 0.1rem;
+    margin-bottom: 2rem;
 }
 
 /*ページネーション*/

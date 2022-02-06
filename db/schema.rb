@@ -10,25 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_04_081439) do
+ActiveRecord::Schema.define(version: 2022_02_05_044442) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "addings", force: :cascade do |t|
-    t.bigint "diary_id", null: false
-    t.bigint "keyword_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["diary_id"], name: "index_addings_on_diary_id"
-    t.index ["keyword_id"], name: "index_addings_on_keyword_id"
-  end
-
-  create_table "connotations", force: :cascade do |t|
-    t.string "connotation", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
 
   create_table "cries", force: :cascade do |t|
     t.bigint "user_id", null: false
@@ -41,7 +26,6 @@ ActiveRecord::Schema.define(version: 2022_02_04_081439) do
   end
 
   create_table "diaries", force: :cascade do |t|
-    t.date "date"
     t.string "title", null: false
     t.string "story", null: false
     t.bigint "user_id", null: false
@@ -78,15 +62,6 @@ ActiveRecord::Schema.define(version: 2022_02_04_081439) do
     t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
-  create_table "meanings", force: :cascade do |t|
-    t.bigint "keyword_id", null: false
-    t.bigint "connotation_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["connotation_id"], name: "index_meanings_on_connotation_id"
-    t.index ["keyword_id"], name: "index_meanings_on_keyword_id"
-  end
-
   create_table "paws", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "diary_id", null: false
@@ -116,11 +91,14 @@ ActiveRecord::Schema.define(version: 2022_02_04_081439) do
     t.string "name", null: false
     t.integer "role", limit: 2, default: 0, null: false
     t.string "avatar"
+    t.string "reset_password_token"
+    t.datetime "reset_password_token_expires_at"
+    t.datetime "reset_password_email_sent_at"
+    t.integer "access_count_to_reset_password_page", default: 0
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token"
   end
 
-  add_foreign_key "addings", "diaries"
-  add_foreign_key "addings", "keywords"
   add_foreign_key "cries", "diaries"
   add_foreign_key "cries", "users"
   add_foreign_key "diaries", "users"
@@ -128,8 +106,6 @@ ActiveRecord::Schema.define(version: 2022_02_04_081439) do
   add_foreign_key "laughs", "users"
   add_foreign_key "likes", "diaries"
   add_foreign_key "likes", "users"
-  add_foreign_key "meanings", "connotations"
-  add_foreign_key "meanings", "keywords"
   add_foreign_key "paws", "diaries"
   add_foreign_key "paws", "users"
   add_foreign_key "surprises", "diaries"

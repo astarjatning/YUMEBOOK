@@ -1,5 +1,5 @@
 require 'rails_helper'
 
-RSpec.describe Adding, type: :model do
+RSpec.describe "password_resets/create.html.slim", type: :view do
   pending "add some examples to (or delete) #{__FILE__}"
 end

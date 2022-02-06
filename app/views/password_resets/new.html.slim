@@ -1,0 +1,14 @@
+.container
+  .row
+    .profile-field.col-lg-6.offset-lg-3.col-md-8.offset-md-2.col-sm-10.offset-sm-1.col-10.offset-1.mt-5
+      h1= t('.title')
+      .password-reset
+        p ご登録のメールアドレスを入力してください。
+        p 再発行用メールが送信されます。
+      = form_with url: password_resets_path, local: true do |f|
+        .form-group
+          = f.label :email, t(User.human_attribute_name(:email))
+          br
+          = f.email_field :email, class: 'form-control'
+        .actions.text-center
+          = f.submit t('.submit'), class: 'active-link btn btn-info my-3'
