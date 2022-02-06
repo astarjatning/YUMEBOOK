@@ -6,7 +6,6 @@ import "channels"
 import 'bootstrap'
 import "@fortawesome/fontawesome-free/css/all.css"
 import '../stylesheets/application'
-import '../javascripts/flatpickr'
 import '../javascripts/toastr'
 
 

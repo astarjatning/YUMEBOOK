@@ -12,7 +12,7 @@
           = f.password_field :password, class: 'form-control'
         .actions.text-center
           .active-link
-            = link_to t('.password_forgot'), '#', class: 'active-link'
+            = link_to t('.password_forgot'), new_password_reset_path, class: 'active-link'
           = f.submit t('.submit'), class: 'active-link btn btn-info my-4'
       .d-flex.justify-content-around
         = link_to root_path, class: 'active-link' do
