@@ -4,5 +4,5 @@
   = diary.likes.count
 - else
   = link_to create_like_path(diary), method: :post, remote:true, class: 'active-link' do
-    i.fas.fa-heart.to-like
+    i.fas.fa-heart.not-reacted
   = diary.likes.count if diary.likes.any?

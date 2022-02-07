@@ -5,9 +5,9 @@ ja:
     logout: 'ログアウト'
     register: '新規登録'
     submit: '投稿'
-    new_post: '新しいゆめ'
+    new_post: '投稿する'
     profile: 'プロフィール'
-    my_posts: '自分のゆめ一覧'
+    my_posts: 'マイページ'
     choose_date: '日付を選択'
     password_reset: 'パスワードリセット申請を受け付けました'
     message:
@@ -20,6 +20,10 @@ ja:
       to_login: 'ログインはこちら'
     create:
       success: '登録しました'
+    show:
+      no_post: 'まだありません'
+      more_posts: 'もっと見る'
+      profile: 'プロフィール'
   user_sessions:
     new:
       title: 'ログイン'
@@ -33,7 +37,9 @@ ja:
       success: 'ログアウトしました'
   diaries:
     index:
+      title: '今日見たゆめをシェアしよう'
       no_post: 'まだありません'
+      more_posts: 'もっと見る'
     new:
       title: '今日どんなゆめ見た？'
       submit: '投稿'
@@ -69,12 +75,6 @@ ja:
     update:
       success: 'パスワードを更新しました'
       fail: 'パスワードを更新できませんでした'
-  views:
-    pagination:
-        first: "<<"
-        last: ">>"
-        previous: "<"
-        next: ">"
 
 
   

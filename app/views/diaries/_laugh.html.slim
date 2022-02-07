@@ -4,5 +4,5 @@
   = diary.laughs.count
 - else
   = link_to create_laugh_path(diary), method: :post, remote:true, class: 'active-link' do
-    i.fas.fa-grin-squint-tears.to-laugh
+    i.fas.fa-grin-squint-tears.not-reacted
   = diary.laughs.count if diary.laughs.any?
