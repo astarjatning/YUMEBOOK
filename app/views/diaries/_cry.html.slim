@@ -4,5 +4,5 @@
   = diary.cries.count
 - else
   = link_to create_cry_path(diary), method: :post, remote:true, class: 'active-link' do
-    i.fas.fa-tired.to-cry
+    i.fas.fa-tired.not-reacted
   = diary.cries.count if diary.cries.any?
