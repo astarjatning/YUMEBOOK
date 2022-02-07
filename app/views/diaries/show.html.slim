@@ -1,7 +1,7 @@
 .container
   .row
     .profile-field.col-lg-6.offset-lg-3.col-md-8.offset-md-2.col-sm-10.offset-sm-1.col-10.offset-1.mt-5
-      - if logged_in? && @diary.user_id == current_user.id
+      - if logged_in? && current_user.own?(@diary)
         = render 'own_show', diary: @diary
       - else
         .dream-title.d-inline

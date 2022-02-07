@@ -1,18 +1,13 @@
-h1.title-text{
+.row.title-text{
+    font-family: 'Train One';
     font-weight: 900;
-    padding-top: 2rem;
-    background: #fff;
-    font-size: 1.2rem;
-    border: solid 5px #333;
-    border-radius: 14px;
-    box-shadow: 10px 10px 5px #39393980;
-}
-
-.latest-text{
-    text-align: center;
-    background-color: rgba(245, 245, 245, 0.623);
-    border-radius: 15px;
-    margin-right: 2rem;
+    background-color: #f8f9fad1;
+    
+    h1{
+        font-size: 1.1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.8rem;
+    }
 }
 
 .latest {
@@ -27,8 +22,8 @@ h1.title-text{
     .avatar-icon{
         max-width: 100%;
         position: absolute;
-        left: -2rem;
-        top: 1.2rem;
+        left: -2.2rem;
+        top: 2.3rem;
         display: block;
         margin: 0 auto;
         border: solid 2px #333;
@@ -87,21 +82,4 @@ h1.title-text{
         margin: 0;
         padding: 0;
     }
-}
-
-.toppage-item{
-    border: solid 5px #333;
-    box-sizing: border-box;
-    border-radius: 12px;
-    background-color: white;
-    padding: 0.5rem;
-    box-shadow: 10px 10px 5px #39393980;
-    transition: all 0.3s ease 0s;
-    display: block;
-}
-
-.toppage-item:hover{
-    cursor: pointer;
-    transform: scale(1.05, 1.05);
-    text-decoration:none;
 }

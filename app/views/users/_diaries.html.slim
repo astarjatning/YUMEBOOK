@@ -1,0 +1,11 @@
+- @diaries.each do |diary|
+  .latest.d-flex.flex-column
+    .avatar-icon
+      = link_to "/#{diary.user.name}" do
+        = image_tag diary.user.avatar.url, class: 'rounded-circle mr15', size: '60x60'
+    .latest-dream
+      = link_to(diary_path(diary), class: 'active-link') do
+        p.pr-3 「#{ diary.title }」
+        = diary.story.truncate(30)
+      ul.reactions.d-flex.justify-content-center.mt-3
+        = render 'diaries/reactions', diary: diary

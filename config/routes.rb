@@ -8,15 +8,10 @@ Rails.application.routes.draw do
   post 'login', to: 'user_sessions#create'
   delete 'logout', to: 'user_sessions#destroy'
   
-  root 'top#top'
+  root 'diaries#index'
   resources :diaries
   resources :users, only: %i[new create]
   resource :profile, only: %i[show edit update]
-  resources :keywords, only: %i[index show] do
-    collection do
-      get 'search'
-    end
-  end
   resources :password_resets, only: %i[new create edit update]
 
   get ':name', to: 'users#show'

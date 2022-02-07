@@ -19,6 +19,14 @@ class User < ApplicationRecord
   validates :password_confirmation, presence: true, if: -> { new_record? || changes[:crypted_password] }
   validates :reset_password_token, uniqueness: true, allow_nil: true
 
+  def own?(object)
+    id == object.user_id
+  end
+
+  def self?(user)
+    id == user.id
+  end
+
   def liked?(diary)
     likes.where(diary_id: diary.id).exists?
   end
