@@ -18,6 +18,7 @@ class User < ApplicationRecord
   validates :password, confirmation: true, length: {minimum: 6}, if: -> { new_record? || changes[:crypted_password] }
   validates :password_confirmation, presence: true, if: -> { new_record? || changes[:crypted_password] }
   validates :reset_password_token, uniqueness: true, allow_nil: true
+  validates :terms_of_service, acceptance: true, on: :create
 
   def own?(object)
     id == object.user_id

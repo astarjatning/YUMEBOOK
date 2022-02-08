@@ -12,11 +12,18 @@
           = f.label :email
           = f.text_field :email, class: 'form-control'
         .form-group
-          = f.label :password
+          = f.label :password, t('.password')
           = f.password_field :password, class: 'form-control'
         .form-group
           = f.label :password_confirmation
           = f.password_field :password_confirmation, class: 'form-control'
+        .form-group.text-center
+          = f.check_box :terms_of_service
+          |  
+          = link_to '利用規約', terms_path, class: 'terms-of-service'
+          | と
+          = link_to 'プライバシーポリシー', privacy_policy_path, class: 'terms-of-service'
+          | に同意する
         .actions.text-center
           = f.submit t('.submit'), class: 'active-link btn btn-info my-3'
       .d-flex.justify-content-around
