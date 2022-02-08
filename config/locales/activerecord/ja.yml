@@ -5,11 +5,12 @@ ja:
       dream: 'ゆめ'
     attributes:
       user:
-        name: 'なまえ'
+        name: 'ユーザーネーム'
         email: 'メールアドレス'
         password: 'パスワード'
         password_confirmation: 'パスワード確認'
         avatar: 'プロフィール画像'
+        terms_of_service: '利用規約'
       diary:
         title: 'タイトル'
         story: 'ストーリー'

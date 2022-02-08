@@ -14,7 +14,8 @@ Rails.application.routes.draw do
   resource :profile, only: %i[show edit update]
   resources :password_resets, only: %i[new create edit update]
 
-  get ':name', to: 'users#show'
+  get '/terms', to: 'pages#terms'
+  get '/privacy_policy', to: 'pages#privacy_policy'
 
   post 'like/:id', to: 'likes#create', as: 'create_like'
   delete 'like/:id', to: 'likes#destroy', as: 'destroy_like'
@@ -30,4 +31,6 @@ Rails.application.routes.draw do
 
   post 'paw/:id', to: 'paws#create', as: 'create_paw'
   delete 'paw/:id', to: 'paws#destroy', as: 'destroy_paw'
+
+  get ':name', to: 'users#show'
 end

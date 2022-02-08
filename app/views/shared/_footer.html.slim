@@ -1,12 +1,13 @@
 .cushion
   footer.mt-5
     .d-flex.justify-content-around
-      .active-link
-        = link_to '利用規約', '#'
-      .active-link
-        = link_to 'プライバシーポリシー', '#', class: 'active-link'
+        = link_to t('defaults.terms'), terms_path, class: 'active-link'
+        = link_to t('defaults.privacy_policy'), privacy_policy_path, class: 'active-link'
     .active-link.text-center.mt-3
-      = link_to 'お問い合わせ', '#', class: 'active-link'
+      = link_to t('defaults.inquiry'),
+                'https://docs.google.com/forms/d/e/1FAIpQLSf2Ol_eN1Ek3JcLypvnZQ_0P5YR1gD4zmPs9es4t8g3O7RwYg/viewform?usp=sf_link',
+         target: :_blank,
+         rel: 'noopener noreferrer'
     .copyright.text-center.mt-3
       | Copyright © 2022 YUMEBOOK
     

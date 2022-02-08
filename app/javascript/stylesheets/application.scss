@@ -1,5 +1,6 @@
 @import '../../../node_modules/bootstrap/scss/bootstrap';
 @import 'index';
+@import 'pages';
 @import 'toastr/build/toastr.min';
 @import '@fortawesome/fontawesome-free/scss/fontawesome';
 @import url('https://fonts.googleapis.com/css2?family=Kosugi&family=Train+One&display=swap');
@@ -28,8 +29,12 @@ a:hover{
     color: #333;
 }
 
-.dreams-index h5{
+.dreams-index {
     text-align: center;
+}
+
+.terms-of-service {
+    color: gray;
 }
 
 /* header */
