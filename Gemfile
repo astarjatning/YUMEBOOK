@@ -34,7 +34,6 @@ gem 'uglifier'
 gem 'jquery-rails'
 gem 'slim-rails'
 gem 'html2slim'
-gem 'carrierwave'
 gem 'kaminari'
 gem 'meta-tags'
 gem "aws-sdk-s3", require: false
