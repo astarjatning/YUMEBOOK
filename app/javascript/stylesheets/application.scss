@@ -185,11 +185,13 @@ i.fas.fa-paw.pawed{
 }
 
 /* パスワードリセット */
-.password-reset p{
+.password-reset {
+    line-height: 1rem;
+    p{
     text-align: left;
     font-weight: 200;
-    line-height: 0.1rem;
     margin-bottom: 2rem;
+    }
 }
 
 /*ページネーション*/

@@ -68,7 +68,17 @@ Rails.application.configure do
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
-  # config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+      adress:               'smtp.gmail.com',
+      enable_starttls_auto: true,
+      port:                 587,
+      domain:               'gmail.com'
+      user_name:            Rails.application.credentials.dig(:mailer, :gmail_address)
+      password:             Rails.application.credentials.dig(:mailer, :app_password)
+      authentication        :plain
+    }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
@@ -119,4 +129,5 @@ Rails.application.configure do
   # config.active_record.database_selector = { delay: 2.seconds }
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
+  config.action_mailer.default_url_options = { protocol: 'https', host: 'www.yume-book.com' }
 end
