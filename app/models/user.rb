@@ -1,11 +1,12 @@
 class User < ApplicationRecord
+  before_create :default_image
   authenticates_with_sorcery!
-  mount_uploader :avatar, AvatarUploader
+
+  has_one_attached :avatar
 
   has_many :diaries, dependent: :destroy
   has_many :likes, dependent: :destroy
   has_many :laughs, dependent: :destroy
-  has_many :griefs, dependent: :destroy
   has_many :cries, dependent: :destroy
   has_many :surprises, dependent: :destroy
   has_many :paws, dependent: :destroy
@@ -19,6 +20,12 @@ class User < ApplicationRecord
   validates :password_confirmation, presence: true, if: -> { new_record? || changes[:crypted_password] }
   validates :reset_password_token, uniqueness: true, allow_nil: true
   validates :terms_of_service, acceptance: true, on: :create
+
+  def default_image
+    if !self.avatar.attached?
+      self.avatar.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'cloud.png')), filename: 'default-image.png', content_type: 'image/png')
+    end
+  end
 
   def own?(object)
     id == object.user_id

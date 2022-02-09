@@ -6,7 +6,7 @@
       - else
         .dream-title.d-inline
           = link_to "/#{@diary.user.name}" do
-            = image_tag @diary.user.avatar.url, class: 'avatar-icon rounded-circle mr15', size: '50x50'
+            = image_tag @diary.user.avatar, class: 'avatar-icon rounded-circle mr15', size: '50x50'
           = @diary.title
         .datetime.align-self-end.d-flex.justify-content-end
           = l @diary.created_at, format: :long

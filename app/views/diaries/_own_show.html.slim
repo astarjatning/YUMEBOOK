@@ -6,7 +6,7 @@
           = link_to diary_path(@diary), method: :delete, data: { confirm: '削除しますか？' } do
             i.fas.fa-trash-alt.mr-3
       = link_to "/#{@diary.user.name}" do
-        = image_tag @diary.user.avatar.url, class: 'avatar-icon rounded-circle mr15', size: '50x50'
+        = image_tag @diary.user.avatar, class: 'avatar-icon rounded-circle mr15', size: '50x50'
       .dream-title.my-2
         = @diary.title
       .datetime.align-self-end.d-flex.justify-content-end
