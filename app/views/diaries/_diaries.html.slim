@@ -2,7 +2,7 @@
   .latest.d-flex.flex-column
     .avatar-icon
       = link_to "/#{diary.user.name}" do
-        = image_tag diary.user.avatar.url, class: 'rounded-circle', size: '50x50'
+        = image_tag diary.user.avatar, class: 'rounded-circle', size: '50x50'
     .latest-dream
       = link_to(diary_path(diary), class:'active-link') do
         p.pr-3 「#{ diary.title }」

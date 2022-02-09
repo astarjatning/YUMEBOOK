@@ -34,9 +34,9 @@ gem 'uglifier'
 gem 'jquery-rails'
 gem 'slim-rails'
 gem 'html2slim'
-gem 'carrierwave'
 gem 'kaminari'
 gem 'meta-tags'
+gem "aws-sdk-s3", require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
