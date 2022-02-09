@@ -32,6 +32,8 @@ Rails.application.configure do
 
   config.assets.js_compressor = :uglifier
 
+  config.assets.initialize_on_precompile = false
+
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.asset_host = 'http://assets.example.com'
 
@@ -71,7 +73,7 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
     config.action_mailer.delivery_method = :smtp
     config.action_mailer.smtp_settings = {
-      adress:               'smtp.gmail.com',
+      address:              'smtp.gmail.com',
       enable_starttls_auto: true,
       port:                 587,
       domain:               'gmail.com',
