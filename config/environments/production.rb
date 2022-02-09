@@ -77,7 +77,7 @@ Rails.application.configure do
       domain:               'gmail.com',
       user_name:            Rails.application.credentials.dig(:mailer, :gmail_address),
       password:             Rails.application.credentials.dig(:mailer, :app_password),
-      authentication        :plain
+      authentication:       :login
     }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
