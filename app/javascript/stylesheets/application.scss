@@ -3,12 +3,11 @@
 @import 'pages';
 @import 'toastr/build/toastr.min';
 @import '@fortawesome/fontawesome-free/scss/fontawesome';
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1&family=Train+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Train+One&display=swap');
 
 body{
     font-family: 'M PLUS Rounded 1c', sans-serif;
     color: #333;
-    font-weight: 800;
     width: 100%;
     height: 100%;
     position: relative;
