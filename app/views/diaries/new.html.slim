@@ -1,7 +1,8 @@
+- content_for(:title, t('.title'))
 .container
   .row
     .profile-field.col-lg-6.offset-lg-3.col-md-8.offset-md-2.col-sm-10.offset-sm-1.col-10.offset-1.mt-3
       h1
-        = t('.title')
+        = t('.title_text')
       = render 'form', diary: @diary
 

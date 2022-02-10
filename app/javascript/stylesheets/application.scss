@@ -3,10 +3,10 @@
 @import 'pages';
 @import 'toastr/build/toastr.min';
 @import '@fortawesome/fontawesome-free/scss/fontawesome';
-@import url('https://fonts.googleapis.com/css2?family=Kosugi&family=Train+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1&family=Train+One&display=swap');
 
 body{
-    font-family: 'Kosugi', sans-serif;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
     color: #333;
     font-weight: 800;
     width: 100%;
@@ -71,7 +71,7 @@ a:hover{
         font-weight: 700;
     }
     .avatar-icon{
-        border: solid 2px #333;
+        border: solid 0.125rem #333;
         border-radius: 50%;
     }   
 }
@@ -129,13 +129,13 @@ i.fas.fa-sign-out-alt:hover {
 
 .profile-field{
     background-color: white;
-    border: solid 5px #333;
-    border-radius: 12px;
+    border: solid 0.3rem #333;
+    border-radius: 0.75rem;
     padding: 1em;
     
     .dream-title{
         .avatar-icon{
-            border: solid 2px #333;
+            border: solid 0.125rem #333;
             border-radius: 50%;
             margin-right: 1rem;
             margin-bottom: 1rem;

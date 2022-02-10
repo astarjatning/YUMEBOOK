@@ -1,18 +1,17 @@
+- content_for(:title, @diary.title)
 .container
   .row
     .profile-field.col-lg-6.offset-lg-3.col-md-8.offset-md-2.col-sm-10.offset-sm-1.col-10.offset-1.mt-5
       - if logged_in? && current_user.own?(@diary)
         = render 'own_show', diary: @diary
       - else
-        .dream-title.d-inline
-          = link_to "/#{@diary.user.name}" do
-            = image_tag @diary.user.avatar, class: 'avatar-icon rounded-circle mr15', size: '50x50'
+        = link_to "/#{@diary.user.name}" do
+          = image_tag @diary.user.avatar, class: 'avatar-icon rounded-circle mr15', size: '50x50'
+        .dream-title.m-2
           = @diary.title
         .datetime.align-self-end.d-flex.justify-content-end
           = l @diary.created_at, format: :long
         table.table
-          tr
-            th scope="row"
-            td= simple_format(@diary.story)
+          td= simple_format(@diary.story)
         ul.reactions.d-flex.justify-content-center.mt-3
           = render 'reactions', diary: @diary
