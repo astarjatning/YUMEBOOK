@@ -11,7 +11,7 @@ module ApplicationHelper
       site: 'YUMEBOOK',
       title: '今日見たゆめをシェアしよう',
       charset: 'utf-8',
-      description: 'ゆめの内容をシェアするサービス。みんなのゆめを覗いてみましょう。',
+      description: 'ゆめの内容をシェアするサービス。みんなのゆめを覗いてみよう。',
       keywords: 'yumebook, ゆめブック, 夢, ゆめ, dream, 夢おち',
       canonical: request.original_url,
       separator: '|',
