@@ -1,12 +1,16 @@
 doctype html
 html
   head
+    title
+      = page_title(yield(:title))
     meta[name="viewport" content="width=device-width,initial-scale=1"]
     = display_meta_tags(default_meta_tags)
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+    - if Rails.env.production?
+      = render 'shared/google_tags'
   body
     - if logged_in?
       = render 'shared/loggedin_header'

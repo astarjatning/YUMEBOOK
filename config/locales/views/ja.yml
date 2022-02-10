@@ -44,7 +44,8 @@ ja:
       no_post: 'まだありません'
       more_posts: 'もっと見る'
     new:
-      title: '今日どんなゆめ見た？'
+      title: '新規投稿'
+      title_text: '今日どんなゆめ見た？'
       submit: '投稿'
     create:
       success: '投稿しました'
@@ -62,13 +63,16 @@ ja:
       new_posts: '新着のゆめ'
       more_posts: 'もっと見る'
   profiles:
+    show:
+      title: 'プロフィール'
     edit:
+      title: 'プロフィール編集'
       submit: '更新'
-    update: 
+    update:
       success: 'プロフィールを更新しました'
   password_resets:
     new:
-      title: 'パスワード再設定'
+      title: 'パスワード再設定申請'
       submit: '申請'
     edit:
       title: 'パスワード再設定'
@@ -78,6 +82,10 @@ ja:
     update:
       success: 'パスワードを更新しました'
       fail: 'パスワードを更新できませんでした'
-
+  pages:
+    terms:
+      title: '利用規約'
+    privacy_policy:
+      title: 'プライバシーポリシー'
 
   

@@ -26,7 +26,7 @@
         top: 2.3rem;
         display: block;
         margin: 0 auto;
-        border: solid 2px #333;
+        border: solid 0.125rem #333;
         border-radius: 50%;
         transition: all 0.3s ease 0s;
     }
@@ -40,18 +40,18 @@
         position: relative;
         display: inline-block;
         margin-bottom: 0.5rem;
-        padding: 20px 20px 5px 30px;
-        min-width: 100px;
+        padding: 1.25rem 1.25rem 0.3rem 1.87rem;
+        min-width: 6.25rem;
         max-width: 90%;
         color: #333;
-        font-size: 16px;
+        font-size: 1rem;
         background: #fff;
-        border: solid 5px #333;
+        border: solid 0.3rem #333;
         box-sizing: border-box;
-        border-radius: 12px;
+        border-radius: 0.75rem;
         width: 78%;
         transition: all 0.3s ease 0s;
-        box-shadow: 10px 10px 5px #39393980;
+        box-shadow: 0.6rem 0.6rem 0.3rem #39393980;
     }
     .latest-dream:hover{
         cursor: pointer;
@@ -61,20 +61,20 @@
         content: "";
         position: absolute;
         top: 50%;
-        left: -24px;
-        margin-top: -12px;
-        border: 12px solid transparent;
-        border-right: 19px solid #fff;
+        left: -1.5rem;
+        margin-top: -0.75rem;
+        border: 0.75rem solid transparent;
+        border-right: 1.2rem solid #fff;
         z-index: 2;
     }
     .latest-dream:after{
         content: "";
         position: absolute;
         top: 50%;
-        left: -30px;
-        margin-top: -14px;
-        border: 14px solid transparent;
-        border-right: 14px solid #333;
+        left: -1.9rem;
+        margin-top: -0.9rem;
+        border: 0.9rem solid transparent;
+        border-right: 0.9rem solid #333;
         z-index: 1;
         pointer-events: auto;
     }

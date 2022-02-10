@@ -7,17 +7,15 @@
             i.fas.fa-trash-alt.mr-3
       = link_to "/#{@diary.user.name}" do
         = image_tag @diary.user.avatar, class: 'avatar-icon rounded-circle mr15', size: '50x50'
-      .dream-title.my-2
+      .dream-title.m-2
         = @diary.title
       .datetime.align-self-end.d-flex.justify-content-end
         = l @diary.created_at, format: :long
       table.table
-        tr
-          th scope="row"
-          td= simple_format(@diary.story)
+        td= simple_format(@diary.story)
       ul.reactions.d-flex.float-left.ml-3.mt-3
         = render 'reactions', diary: diary
       .active-link.float-right
-        = link_to "https://twitter.com/share?url=#{ request.url }&text=今日こんなゆめ見ました%0a「#{ @diary.title }」%0a&hashtags=夢, 夢日記, YUMEBOOK", class: 'btn tweet-button', target: '_blank' do
+        = link_to "https://twitter.com/share?url=#{ request.url }&text=今日こんなゆめ見ました%0a「#{ @diary.title }」%0a&hashtags=夢,夢日記,YUMEBOOK", class: 'btn tweet-button', target: '_blank' do
           i.fab.fa-twitter
           |  ツイートする

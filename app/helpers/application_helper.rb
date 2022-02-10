@@ -1,4 +1,11 @@
 module ApplicationHelper
+
+  def page_title(page_title = '')
+    base_title = 'YUMEBOOK'
+
+    page_title.empty? ? base_title : page_title + " | " + base_title
+  end
+
   def default_meta_tags
     {
       site: 'YUMEBOOK',
