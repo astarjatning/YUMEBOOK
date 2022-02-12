@@ -21,12 +21,6 @@ h1{
     padding-bottom: 2rem;
     color: #333;
 }
-a {
-    color: #333;
-}
-a:hover{
-    color: #333;
-}
 
 .dreams-index {
     text-align: center;
@@ -39,6 +33,14 @@ a:hover{
 .table{
     table-layout: fixed;
     overflow-wrap: break-word;
+}
+
+/* フラッシュメッセージ */
+#toast-container{
+    margin-top: 7.2rem;
+    div {
+        padding: 0.3rem 0.6rem 0.3rem 3rem;
+    }
 }
 
 /* header */
@@ -125,6 +127,14 @@ i.fas.fa-sign-out-alt:hover {
 .active-link{
     transition: all 0.3s ease 0s;
 }
+
+a {
+    color: #333;
+}
+a:hover{
+    color: #333;
+}
+
 .active-link:hover{
     cursor: pointer;
     transform: scale(1.1, 1.1);
@@ -167,6 +177,8 @@ ul.reactions {
     padding-left: 0 !important;
     font-weight: normal;
     font-size: 0.5rem;
+    z-index: 6;
+    position: relative;
 }
 
 .not-reacted{

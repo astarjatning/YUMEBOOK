@@ -1,3 +1,6 @@
-- flash.each do |message_type, message|
-  javascript:
-    toastr['#{message_type}']('#{message}');
+- if flash.any?
+  - flash.each do |type, msg|
+    javascript:
+      $(window).on("load", function() {
+        toastr['#{type}']('#{msg}');
+        })
