@@ -6,6 +6,7 @@
     .latest-dream
       = link_to diary_path(diary), class: 'dream-link' do
         p.pr-3 「#{ diary.title }」
-        = diary.story.truncate(30)
+        p.ml-3.mr-3
+          = diary.story.truncate(30)
       ul.reactions.d-flex.justify-content-center.mt-3
         = render 'reactions', diary: diary

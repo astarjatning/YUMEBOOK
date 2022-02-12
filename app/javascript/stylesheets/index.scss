@@ -63,6 +63,8 @@
             height: 100%;
             padding-top: 1rem;
             z-index: 5;
+            table-layout: fixed;
+            overflow-wrap: break-word;
         }
         .dream-link:hover {
             color: gray;
