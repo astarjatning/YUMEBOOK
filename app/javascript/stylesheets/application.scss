@@ -22,6 +22,10 @@ h1{
     color: #333;
 }
 
+.contents{
+    padding-top: 6rem;
+}
+
 .dreams-index {
     text-align: center;
 }
@@ -45,7 +49,7 @@ h1{
 
 /* header */
 .navbar{
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(247, 241, 237, 0.6);
     text-decoration: black;
     width: 100%;
     max-width: 100%;
@@ -115,6 +119,7 @@ i:hover{
 .tweet-button:hover{
     color: white;
 }
+
 i.fas.fa-sign-in-alt,
 i.fas.fa-user-plus,
 i.fas.fa-pencil-alt,
