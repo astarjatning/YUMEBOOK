@@ -9,6 +9,23 @@
         padding-bottom: 0.8rem;
     }
 }
+/* 投稿ボタン */
+@media screen and (min-width:320px)and (max-width:450px){
+    .post-button{
+        position: fixed;
+        right: 1rem;
+        bottom: 3rem;
+        z-index: 6;
+        background-color: rgba(247, 229, 222, 0.7);
+        border-radius: 50%;
+        padding: 1rem;
+    }
+}
+@media screen and (min-width:451px){
+    .post-button{
+        display: none;
+    }
+}
 
 .latest {
     display: flex;
@@ -96,4 +113,17 @@
         z-index: 1;
         pointer-events: auto;
     }
+}
+
+/* ツイートアイコン */
+.tweet-icon{
+    color:  #329eeb;
+    font-size: 2rem;
+}
+.tweet-icon:hover{
+    color:  #329eeb;
+}
+.index-twitter-icon{
+    z-index: 6;
+    position: relative;
 }

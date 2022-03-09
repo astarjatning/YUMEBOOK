@@ -1,5 +1,5 @@
-- if logged_in? && current_user.cried?(diary)
-  = link_to destroy_cry_path(diary), method: :delete, remote: true, class: 'active-link' do
+- if diary.cries.any?
+  = link_to create_cry_path(diary), method: :post, remote: true, class: 'active-link' do
     i.fas.fa-tired.cried
   = diary.cries.count
 - else
