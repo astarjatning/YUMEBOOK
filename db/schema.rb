@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_11_094240) do
+ActiveRecord::Schema.define(version: 2022_03_12_101726) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -67,14 +67,6 @@ ActiveRecord::Schema.define(version: 2022_03_11_094240) do
     t.index ["diary_id", "tag_id"], name: "index_diary_tags_on_diary_id_and_tag_id", unique: true
     t.index ["diary_id"], name: "index_diary_tags_on_diary_id"
     t.index ["tag_id"], name: "index_diary_tags_on_tag_id"
-  end
-
-  create_table "keywords", force: :cascade do |t|
-    t.string "word", null: false
-    t.string "description", null: false
-    t.string "furigana", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "laughs", force: :cascade do |t|

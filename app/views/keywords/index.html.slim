@@ -1,9 +1,0 @@
-.container
-  .row
-    .col-lg-8.offset-lg-2.mt-5
-      ul.keywords-list
-        - @searched_keywords.each do |keyword|
-          li.my-2
-            = link_to keyword.word, keyword_path(keyword.id)
-  .row.mt-3
-    = link_to '← back', root_path, style: 'color:black;'

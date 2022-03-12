@@ -56,6 +56,6 @@ class DiariesController < ApplicationController
   end
 
   def diary_params
-    params.require(:diary).permit(:title, :date, :story, addings_attributes: [:id, :keyword_id])
+    params.require(:diary).permit(:title, :story)
   end
 end
