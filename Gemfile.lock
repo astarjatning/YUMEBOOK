@@ -110,6 +110,7 @@ GEM
     diff-lcs (1.5.0)
     erubi (1.10.0)
     erubis (2.7.0)
+    execjs (2.8.1)
     factory_bot (6.2.0)
       activesupport (>= 5.0.0)
     factory_bot_rails (6.2.0)
@@ -347,6 +348,8 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
+    uglifier (4.2.0)
+      execjs (>= 0.3.0, < 3)
     unicode-display_width (2.1.0)
     web-console (4.2.0)
       actionview (>= 6.0.0)
@@ -406,6 +409,7 @@ DEPENDENCIES
   spring
   turbolinks (~> 5)
   tzinfo-data
+  uglifier
   web-console (>= 4.1.0)
   webdrivers
   webpacker (~> 5.0)
