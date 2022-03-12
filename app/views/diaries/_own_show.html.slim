@@ -1,21 +1,23 @@
       ul.list-inline.float-right
         li.list-inline-item
-          = link_to edit_diary_path(@diary) do
+          = link_to edit_diary_path(diary) do
             i.fas.fa-edit.mr-3
         li.list-inline-item
-          = link_to diary_path(@diary), method: :delete, data: { confirm: '削除しますか？' } do
+          = link_to diary_path(diary), method: :delete, data: { confirm: '削除しますか？' } do
             i.fas.fa-trash-alt.mr-3
-      = link_to "/#{@diary.user.name}" do
-        = image_tag @diary.user.avatar, class: 'avatar-icon rounded-circle mr15', size: '50x50'
+      = link_to "/#{diary.user.name}" do
+        = image_tag diary.user.avatar, class: 'avatar-icon rounded-circle mr15', size: '50x50'
       .dream-title.m-2
-        = @diary.title
+        = diary.title
       .datetime.align-self-end.d-flex.justify-content-end
-        = l @diary.created_at, format: :long
-      table.table
-        td= simple_format(@diary.story)
-      ul.reactions.d-flex.float-left.ml-3.mt-3
+        = l diary.created_at, format: :long
+      table.table.mb-0
+        td= simple_format(diary.story)
+      .tag-list.ml-3
+        - diary.tags.each do |tag|
+          = link_to "##{tag.tag_name} ", tag_diaries_path(tag_id: tag.id), class: 'tag-button btn btn-info active-link mr-2 mt-2'
+      ul.reactions.d-flex.mt-3
         = render 'reactions', diary: diary
-      .active-link.float-right
-        = link_to "https://twitter.com/share?url=#{ request.url }&text=今日こんなゆめ見ました%0a「#{ @diary.title }」%0a&hashtags=夢,夢日記,YUMEBOOK", class: 'btn tweet-button', target: '_blank' do
+      .float-right
+        = link_to "https://twitter.com/share?url=#{ request.url }&text=今日こんなゆめ見ました%0a「#{ diary.title }」%0a&hashtags=夢,夢日記,YUMEBOOK", class: 'tweet-button', target: '_blank' do
           i.fab.fa-twitter
-          |  ツイートする

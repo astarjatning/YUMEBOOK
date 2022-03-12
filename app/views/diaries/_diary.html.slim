@@ -1,0 +1,18 @@
+.latest.d-flex.flex-column
+  .avatar-icon
+    = link_to "/#{diary.user.name}" do
+      = image_tag diary.user.avatar, class: 'rounded-circle', size: '50x50'
+  .latest-dream
+    = link_to diary_path(diary), class: 'dream-link' do
+      p.pr-3 「#{ diary.title }」
+      p.ml-3.mr-3
+        = diary.story.truncate(30)
+    ul.index-reactions.d-flex.justify-content-center.mt-3
+      = render 'diaries/reactions', diary: diary
+    .tag-list.text-center
+      - diary.tags.first(3).each do |tag|
+        = link_to "##{tag.tag_name} ", tag_diaries_path(tag_id: tag.id), class: 'index-tags mr-2'
+      - if logged_in? && current_user.own?(diary)
+        .index-twitter-icon.active-link.float-right
+          = link_to "https://twitter.com/share?url=https://yume-book.com/diaries/#{diary.id}&text=今日こんなゆめ見ました%0a「#{ diary.title }」%0a&hashtags=夢,夢日記,YUMEBOOK", class: 'tweet-icon', target: '_blank' do
+            i.fab.fa-twitter

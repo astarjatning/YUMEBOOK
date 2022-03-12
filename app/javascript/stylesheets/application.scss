@@ -36,6 +36,7 @@ h1{
 
 .table{
     table-layout: fixed;
+    /* 文字折り返し */
     overflow-wrap: break-word;
 }
 
@@ -49,7 +50,7 @@ h1{
 
 /* header */
 .navbar{
-    background-color: rgba(247, 241, 237, 0.6);
+    background-color: rgba(247, 241, 237, 0.8);
     text-decoration: black;
     width: 100%;
     max-width: 100%;
@@ -115,6 +116,11 @@ i:hover{
 .tweet-button{
     background-color: #329eeb;
     color: white;
+    padding: 0.5rem;
+    border-radius: 50%;
+    position:relative;
+    bottom: 2.5rem;
+    right: 0.5rem
 }
 .tweet-button:hover{
     color: white;
@@ -184,8 +190,29 @@ ul.reactions {
     font-size: 0.5rem;
     z-index: 6;
     position: relative;
-    padding-top: 1.3rem;
-    margin-left: 1.5rem;
+    padding-top: 1rem;
+    width: 14rem;
+    text-align: center;
+}
+@media(max-width:375px){
+    ul.reactions {
+        margin-left: 1rem;
+    }
+}
+@media(min-width:376px)and(max-width:450px){
+    ul.reactions {
+        margin-left: 1rem;
+    }
+}
+@media(min-width:451px)and(max-width:991px){
+    ul.reactions {
+        margin-left: 4rem;
+    }
+}
+@media(min-width:992px){
+    ul.reactions {
+        margin-left: 7rem;
+    }
 }
 
 .not-reacted{
@@ -205,6 +232,24 @@ i.fas.fa-flushed.surprised{
 }
 i.fas.fa-paw.pawed{
     color: #009900;
+}
+
+/* タグボタン */
+.tag-button.btn.btn-info {
+    font-size: 0.7rem;
+    background-color: #17a3b8c7;
+    border: none;
+}
+.tag-button.btn.btn-outline-info {
+    font-size: 0.7rem;
+    border-color:  #17a3b8c7;
+}
+.index-tags {
+    font-size: 0.7rem;
+    color:  #17a3b8c7;
+    position: relative;
+    bottom: 0.5rem;
+    z-index: 6;
 }
 
 /* パスワードリセット */
