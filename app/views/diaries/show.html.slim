@@ -1,7 +1,7 @@
 - content_for(:title, @diary.title)
 .container
   .row
-    .profile-field.col-lg-6.offset-lg-3.col-md-8.offset-md-2.col-sm-10.offset-sm-1.col-10.offset-1.mt-5
+    .profile-field.col-lg-6.offset-lg-3.col-md-6.offset-md-3.col-sm-8.offset-sm-2.col-10.offset-1.mt-5
       - if logged_in? && current_user.own?(@diary)
         = render 'own_show', diary: @diary
       - else
@@ -13,5 +13,8 @@
           = l @diary.created_at, format: :long
         table.table
           td= simple_format(@diary.story)
+        .tag-list
+          - @diary.tags.each do |tag|
+            = link_to "##{tag.tag_name} ", tag_diaries_path(tag_id: tag.id), class: 'tag-button btn btn-info active-link mr-2'
         ul.reactions.d-flex.justify-content-center.mt-3
           = render 'reactions', diary: @diary

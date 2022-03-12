@@ -14,5 +14,5 @@ ja:
       diary:
         title: 'タイトル'
         story: 'ストーリー'
-        date: '日付'
+        tag_name: 'タグ'
 

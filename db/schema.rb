@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_04_074902) do
+ActiveRecord::Schema.define(version: 2022_03_11_094240) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,16 @@ ActiveRecord::Schema.define(version: 2022_03_04_074902) do
     t.index ["user_id"], name: "index_diaries_on_user_id"
   end
 
+  create_table "diary_tags", force: :cascade do |t|
+    t.bigint "diary_id", null: false
+    t.bigint "tag_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["diary_id", "tag_id"], name: "index_diary_tags_on_diary_id_and_tag_id", unique: true
+    t.index ["diary_id"], name: "index_diary_tags_on_diary_id"
+    t.index ["tag_id"], name: "index_diary_tags_on_tag_id"
+  end
+
   create_table "keywords", force: :cascade do |t|
     t.string "word", null: false
     t.string "description", null: false
@@ -95,6 +105,12 @@ ActiveRecord::Schema.define(version: 2022_03_04_074902) do
     t.index ["diary_id"], name: "index_surprises_on_diary_id"
   end
 
+  create_table "tags", force: :cascade do |t|
+    t.string "tag_name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", null: false
     t.string "crypted_password"
@@ -115,6 +131,8 @@ ActiveRecord::Schema.define(version: 2022_03_04_074902) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "cries", "diaries"
   add_foreign_key "diaries", "users"
+  add_foreign_key "diary_tags", "diaries"
+  add_foreign_key "diary_tags", "tags"
   add_foreign_key "laughs", "diaries"
   add_foreign_key "likes", "diaries"
   add_foreign_key "paws", "diaries"

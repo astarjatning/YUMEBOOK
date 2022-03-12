@@ -55,12 +55,7 @@ ja:
       success: '更新しました'
     destroy:
       success: '削除しました'
-  top:
-    top:
-      title: '今日見たゆめをシェアしよう'
-      no_post: 'まだありません'
-      try_post: '投稿してみる'
-      new_posts: '新着のゆめ'
+    search:
       more_posts: 'もっと見る'
   profiles:
     show:

@@ -6,17 +6,17 @@
           = t('.title')
 .container
   .row
-    .col-lg-6.offset-lg-3.col-md-10.offset-md-1.col-sm-11.offset-sm-1.col-11.offset-1.mt-3
+    .col-lg-6.offset-lg-3.col-md-8.offset-md-2.col-sm-11.offset-sm-1.col-11.offset-1.mt-3
       .post-button
         = link_to new_diary_path do
           i.fas.fa-pencil-alt
       .dreams-index
         - if @diaries.present?
           #dreams-paginame
-            = render 'diaries', diaries: @diaries
+            = render @diaries
         - else
           p.my-5.mr-3
             = t('.no_post')
     .col-lg-4.offset-lg-4.col-md-4.offset-md-4.col-sm-4.offset-sm-4.col-12.text-center.mt-3
       .active-link
-        = link_to_next_page @diaries, 'もっと見る', remote: true, class: 'more-dreams ml-5', id: 'more-dreams'
+        = link_to_next_page @diaries, t('.more_posts'), remote: true, class: 'more-dreams ml-5', id: 'more-dreams'
