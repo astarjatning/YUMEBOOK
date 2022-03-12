@@ -1,6 +1,5 @@
 class Diary < ApplicationRecord
   belongs_to :user
-  has_many :keywords, through: :addings
   has_many :likes, dependent: :destroy
   has_many :laughs, dependent: :destroy
   has_many :cries, dependent: :destroy
