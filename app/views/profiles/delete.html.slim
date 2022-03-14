@@ -1,0 +1,13 @@
+- content_for(:title, t('.title'))
+.container
+  .row
+    .profile-field.col-lg-6.offset-lg-3.col-md-8.offset-md-2.col-sm-10.offset-sm-1.col-10.offset-1.mt-5
+      .seceding_message.p-5
+        p 本当に退会しますか？
+        p 退会すると関連する投稿はすべて削除されます。
+      .actions.text-center.mb-3
+        = link_to t('.delete'), user_path(@user), method: :delete, class: 'btn btn-danger'
+    .col-lg-6.offset-lg-3.col-md-8.offset-md-2.col-sm-10.offset-sm-1.col-10.offset-1.mt-3
+      = link_to :back do
+        .back.i.fas.fa-hand-point-left
+        
