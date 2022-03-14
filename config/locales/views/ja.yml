@@ -12,6 +12,8 @@ ja:
     privacy_policy: 'プライバシーポリシー'
     inquiry: 'お問い合わせ(googleフォーム)'
     password_reset: 'パスワードリセット申請を受け付けました'
+    greeting_mail: '会員登録が完了しました'
+    account_deleted: '退会手続きが完了しました'
     message:
       require_login: 'ログインしてください'
       created: '投稿しました'
@@ -63,6 +65,10 @@ ja:
     edit:
       title: 'プロフィール編集'
       submit: '更新'
+      to_delete: '退会する'
+    delete:
+      title: '退会'
+      delete: '退会する'
     update:
       success: 'プロフィールを更新しました'
   password_resets:

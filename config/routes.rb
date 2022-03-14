@@ -10,14 +10,14 @@ Rails.application.routes.draw do
   
   root 'diaries#index'
   resources :diaries
-  resources :users, only: %i[new create]
+  resources :users, only: %i[new create destroy]
   resource :profile, only: %i[show edit update]
   resources :password_resets, only: %i[new create edit update]
 
   resources :tags do
     get 'diaries', to: 'diaries#search'
   end
-
+  get '/delete_account', to: 'profiles#delete'
   get '/terms', to: 'pages#terms'
   get '/privacy_policy', to: 'pages#privacy_policy'
   post 'like/:id', to: 'likes#create', as: 'create_like'

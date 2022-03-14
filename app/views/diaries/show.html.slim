@@ -13,7 +13,7 @@
           = l @diary.created_at, format: :long
         table.table
           td= simple_format(@diary.story)
-        .tag-list
+        .tag-list.ml-3
           - @diary.tags.each do |tag|
             = link_to "##{tag.tag_name} ", tag_diaries_path(tag_id: tag.id), class: 'tag-button btn btn-info active-link mr-2'
         ul.reactions.d-flex.justify-content-center.mt-3

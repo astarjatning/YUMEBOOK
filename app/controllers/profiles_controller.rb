@@ -13,6 +13,8 @@ class ProfilesController < ApplicationController
     end
   end
 
+  def delete; end
+
   private
 
   def set_user

@@ -16,10 +16,13 @@
         .form-group
           = f.label :avatar
           = f.file_field :avatar, class: 'form-control', accept: 'image/*', id: "image-select-btn"
-          .text-center.my-3
+        .text-center.my-3
             = image_tag @user.avatar, class: 'rounded-circle', id: "img_prev", size: '100x100'
         .actions.text-center
           = f.submit t('.submit'), class: 'active-link btn btn-info my-3'
+        .text-right.mb-3.mr-3 
+          = link_to delete_account_path(id: @user.id) do
+            .to-delete.active-link.i.fas.fa-hand-point-right =t('.to_delete')
     .col-lg-6.offset-lg-3.col-md-8.offset-md-2.col-sm-10.offset-sm-1.col-10.offset-1.mt-3
        = link_to profile_path do
         .back.i.fas.fa-hand-point-left

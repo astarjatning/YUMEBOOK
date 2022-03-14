@@ -15,10 +15,18 @@ class UsersController < ApplicationController
 
     if @user.save
       auto_login(@user)
+      UserMailer.with(user: @user).greeting_mail.deliver_later
       redirect_to root_path, info: t('.success')
     else
       render :new
     end
+  end
+
+  def destroy
+    @user = User.find(params[:id])
+    UserMailer.with(user: @user).account_deleted.deliver_later
+    @user.destroy!
+    redirect_to root_path
   end
 
   private
