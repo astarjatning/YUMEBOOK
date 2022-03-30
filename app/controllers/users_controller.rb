@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by(name: params[:name])
     @diaries = @user.diaries.page(params[:page]).order(created_at: :desc)
+    @diaries_on_calendar = @user.diaries.all
   end
 
   def new
@@ -27,6 +28,13 @@ class UsersController < ApplicationController
     UserMailer.account_deleted(@user).deliver_now
     @user.destroy!
     redirect_to root_path
+  end
+
+  def search
+    @user = User.find(params[:id])
+    @diaries = @user.diaries.where("DATE(created_at) = '#{params[:date]}'").order(created_at: :desc)
+    @diaries_on_calendar = @user.diaries.all
+    @date = params[:date].to_date
   end
 
   private

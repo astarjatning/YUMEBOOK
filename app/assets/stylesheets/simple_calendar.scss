@@ -1,0 +1,49 @@
+@media(max-width:575px){
+    .calendar {
+        margin-left: 0.5rem;
+    }
+}
+.calendar {
+    background-color: #f8f9fa91;
+    border-radius: 10%;
+    border: dotted;
+}
+
+.simple-calendar {
+
+    .table {
+        overflow-wrap: initial;
+    }
+    .table th, .table td {
+        border: none !important;
+        text-align: center;
+    }
+    /* 曜日 */
+    .calendar-heading {
+        display: flex;
+        justify-content: space-around;
+    }
+    .day {
+        text-align: center;
+        padding: 0.5rem;
+    }
+    /* 投稿のある日 */
+    .date_with_diary{
+        background-color: #efac106e;
+        border-radius: 50%;
+    }
+    a:hover {
+        text-decoration: none !important;
+    }
+
+    .today {
+        background-color: rgba(0, 0, 0, 0.08);
+        border-radius: 30%;
+    }
+}
+
+/* 検索結果 */
+.searched_date {
+    font-size: 1.3rem;
+    color: #686464bf;
+}

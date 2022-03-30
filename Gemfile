@@ -34,6 +34,7 @@ gem 'slim-rails'
 gem 'kaminari'
 gem 'meta-tags'
 gem "aws-sdk-s3", require: false
+gem 'simple_calendar'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
