@@ -10,7 +10,11 @@ Rails.application.routes.draw do
   
   root 'diaries#index'
   resources :diaries
-  resources :users, only: %i[new create destroy]
+  resources :users, only: %i[new create destroy] do
+    member do
+      get 'search'
+    end
+  end
   resource :profile, only: %i[show edit update]
   resources :password_resets, only: %i[new create edit update]
 

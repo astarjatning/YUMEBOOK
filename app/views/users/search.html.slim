@@ -7,6 +7,9 @@
       .post-button
         = link_to new_diary_path do
           i.fas.fa-pencil-alt
+      .searched_date.text-center.m-4
+        = l @date
+        | のゆめ
       .dreams-index
         - if @diaries.present?
           #dreams-paginame
@@ -14,6 +17,3 @@
         - else
           p.my-5.mr-3
             = t('.no_post')
-    .col-lg-4.offset-lg-4.col-md-4.offset-md-4.col-sm-4.offset-sm-4.col-12.text-center.mt-3
-      .active-link
-        = link_to_next_page @diaries, t('.more_posts'), remote: true, class: 'more-dreams ml-5', id: 'more-dreams'

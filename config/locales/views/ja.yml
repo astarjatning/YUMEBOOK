@@ -29,6 +29,8 @@ ja:
       no_post: 'まだありません'
       more_posts: 'もっと見る'
       profile: 'プロフィール'
+    search:
+      no_post: '投稿されたゆめはありません'
   user_sessions:
     new:
       title: 'ログイン'
@@ -88,5 +90,8 @@ ja:
       title: '利用規約'
     privacy_policy:
       title: 'プライバシーポリシー'
+  simple_calendar:
+    previous: "<<"
+    next: ">>"
 
   
