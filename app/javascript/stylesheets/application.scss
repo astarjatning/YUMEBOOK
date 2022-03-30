@@ -235,15 +235,11 @@ i.fas.fa-paw.pawed{
 }
 
 /* タグボタン */
-.tag-button.btn.btn-info {
-    font-size: 0.7rem;
-    background-color: #17a3b8c7;
-    border: none;
+.tag-button {
+    font-size: 1rem;
+    color: #17a3b8c7;
 }
-.tag-button.btn.btn-outline-info {
-    font-size: 0.7rem;
-    border-color:  #17a3b8c7;
-}
+
 .index-tags {
     font-size: 0.7rem;
     color:  #17a3b8c7;
