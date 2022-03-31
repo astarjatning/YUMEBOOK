@@ -12,13 +12,13 @@ https://www.yume-book.com
 ## 機能紹介
 | TOP画面 | 詳細画面 |
 | ---- |----|
-| [![Image from Gyazo](https://i.gyazo.com/fe2fe391cba37957a1867cdef38f6a5b.gif)](https://gyazo.com/fe2fe391cba37957a1867cdef38f6a5b) | [![Image from Gyazo](https://i.gyazo.com/1f42b9362a2fe1327f43a0b61e1242db.png)](https://gyazo.com/1f42b9362a2fe1327f43a0b61e1242db) |
-| 投稿された夢一覧 | 各夢の詳細 |
+| [![Image from Gyazo](https://i.gyazo.com/fe2fe391cba37957a1867cdef38f6a5b.gif)](https://gyazo.com/fe2fe391cba37957a1867cdef38f6a5b) | [![Image from Gyazo](https://i.gyazo.com/cd789afe5ef9944aa200abcab6c0f218.gif)](https://gyazo.com/cd789afe5ef9944aa200abcab6c0f218)  |
+| 投稿された夢一覧 | 5種のボタンで自由にリアクションする事ができます。  |
 
 | リアクション機能 | 投稿画面 |
 | ---- | ---- |
-| [![Image from Gyazo](https://i.gyazo.com/cd789afe5ef9944aa200abcab6c0f218.gif)](https://gyazo.com/cd789afe5ef9944aa200abcab6c0f218) | [![Image from Gyazo](https://i.gyazo.com/9f008739ce712cec5932b62637978d1a.png)](https://gyazo.com/9f008739ce712cec5932b62637978d1a) |
-| 5種のボタンで自由にリアクションする事ができます。 | ログインすると自分の夢を投稿する事ができます。 |
+| [![Image from Gyazo](https://i.gyazo.com/1f42b9362a2fe1327f43a0b61e1242db.png)](https://gyazo.com/1f42b9362a2fe1327f43a0b61e1242db) | [![Image from Gyazo](https://i.gyazo.com/9f008739ce712cec5932b62637978d1a.png)](https://gyazo.com/9f008739ce712cec5932b62637978d1a) |
+| 各夢の詳細 | ログインすると自分の夢を投稿する事ができます。 |
 
 | マイページ | タグ付け |
 | ---- | ---- |
