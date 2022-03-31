@@ -5,7 +5,9 @@
 https://www.yume-book.com
 
 ## サービス概要
-今日見た夢の内容をシェアするサービスです。
+今日見た夢の内容をシェアするサービス。  
+みんなの夢を覗き見たり、毎日の夢日記としても活用できます。
+
 
 ## 機能紹介
 | TOP画面 | 詳細画面 |
@@ -18,10 +20,10 @@ https://www.yume-book.com
 | [![Image from Gyazo](https://i.gyazo.com/cd789afe5ef9944aa200abcab6c0f218.gif)](https://gyazo.com/cd789afe5ef9944aa200abcab6c0f218) | [![Image from Gyazo](https://i.gyazo.com/9f008739ce712cec5932b62637978d1a.png)](https://gyazo.com/9f008739ce712cec5932b62637978d1a) |
 | 5種のボタンで自由にリアクションする事ができます。 | ログインすると自分の夢を投稿する事ができます。 |
 
-| マイページ | 投稿画面 |
+| マイページ | タグ付け |
 | ---- | ---- |
-| [![Image from Gyazo](https://i.gyazo.com/b4f2ea0f4804dafeaade8e8ee9903780.png)](https://gyazo.com/b4f2ea0f4804dafeaade8e8ee9903780) |  |
-| 投稿のあった日をカレンダーに表示。日付ごとの日記も確認できます |  |
+| [![Image from Gyazo](https://i.gyazo.com/b4f2ea0f4804dafeaade8e8ee9903780.png)](https://gyazo.com/b4f2ea0f4804dafeaade8e8ee9903780) | [![Image from Gyazo](https://i.gyazo.com/da627e14ae43446ab57df45cabb42f2d.png)](https://gyazo.com/da627e14ae43446ab57df45cabb42f2d) |
+| マイページでは投稿のあった日をカレンダーに表示。日付ごとの日記も確認できます。 | 投稿にはタグを付与でき、同じタグがつけられた夢を検索できます。 |
 
 ## 使用技術
 バックエンド
