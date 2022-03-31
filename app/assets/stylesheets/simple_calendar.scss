@@ -1,16 +1,16 @@
-@media(max-width:575px){
-    .calendar {
-        margin-left: 0.5rem;
-    }
-}
 .calendar {
     background-color: #f8f9fa91;
     border-radius: 10%;
     border: dotted;
 }
 
-.simple-calendar {
+@media(max-width:575px){
+    .calendar {
+        margin-left: 0.5rem;
+    }
+}
 
+.simple-calendar {
     .table {
         overflow-wrap: initial;
     }
@@ -46,4 +46,5 @@
 .searched_date {
     font-size: 1.3rem;
     color: #686464bf;
+    font-family: "Train One";
 }
