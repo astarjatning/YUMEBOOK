@@ -4,7 +4,13 @@
     border: dotted;
 }
 
-@media(max-width:575px){
+@media (min-width: 450px) and (max-width: 575px){
+    .calendar {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+}
+@media(max-width:449px){
     .calendar {
         margin-left: 0.5rem;
     }
