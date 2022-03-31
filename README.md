@@ -10,14 +10,18 @@ https://www.yume-book.com
 ## 機能紹介
 | TOP画面 | 詳細画面 |
 | ---- |----|
-| [![Image from Gyazo](https://i.gyazo.com/fe2fe391cba37957a1867cdef38f6a5b.gif)](https://gyazo.com/fe2fe391cba37957a1867cdef38f6a5b) | [![Image from Gyazo](https://i.gyazo.com/8854340e7e3bf72dfb52f4b031fea639.png)](https://gyazo.com/8854340e7e3bf72dfb52f4b031fea639) |
+| [![Image from Gyazo](https://i.gyazo.com/fe2fe391cba37957a1867cdef38f6a5b.gif)](https://gyazo.com/fe2fe391cba37957a1867cdef38f6a5b) | [![Image from Gyazo](https://i.gyazo.com/1f42b9362a2fe1327f43a0b61e1242db.png)](https://gyazo.com/1f42b9362a2fe1327f43a0b61e1242db) |
 | 投稿された夢一覧 | 各夢の詳細 |
 
 | リアクション機能 | 投稿画面 |
 | ---- | ---- |
-| [![Image from Gyazo](https://i.gyazo.com/c135d6aa06923731efd0fd934bad78dd.gif)](https://gyazo.com/c135d6aa06923731efd0fd934bad78dd) | [![Image from Gyazo](https://i.gyazo.com/9f008739ce712cec5932b62637978d1a.png)](https://gyazo.com/9f008739ce712cec5932b62637978d1a) |
+| [![Image from Gyazo](https://i.gyazo.com/cd789afe5ef9944aa200abcab6c0f218.gif)](https://gyazo.com/cd789afe5ef9944aa200abcab6c0f218) | [![Image from Gyazo](https://i.gyazo.com/9f008739ce712cec5932b62637978d1a.png)](https://gyazo.com/9f008739ce712cec5932b62637978d1a) |
 | 5種のボタンで自由にリアクションする事ができます。 | ログインすると自分の夢を投稿する事ができます。 |
 
+| マイページ | 投稿画面 |
+| ---- | ---- |
+| [![Image from Gyazo](https://i.gyazo.com/b4f2ea0f4804dafeaade8e8ee9903780.png)](https://gyazo.com/b4f2ea0f4804dafeaade8e8ee9903780) |  |
+| 投稿のあった日をカレンダーに表示。日付ごとの日記も確認できます |  |
 
 ## 使用技術
 バックエンド

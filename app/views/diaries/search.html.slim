@@ -8,6 +8,8 @@
       .dreams-index
         - if @diaries.present?
           #dreams-paginame
+            .tagged-dreams
+              | ##{@tag.tag_name}
             = render @diaries
         - else
           p.my-5.mr-3
