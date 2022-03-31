@@ -1,3 +1,4 @@
+/* タイトルテキスト */
 .row.title-text{
     font-family: 'Train One';
     font-weight: 900;
@@ -9,6 +10,12 @@
         padding-bottom: 0.8rem;
     }
 }
+
+/* 投稿一覧 */
+.dreams-index {
+    text-align: center;
+}
+
 /* 投稿ボタン */
 @media screen and (min-width:320px)and (max-width:500px){
     .post-button{
@@ -26,7 +33,7 @@
         display: none;
     }
 }
-
+/* indexの投稿 */
 .latest {
     display: flex;
     justify-content: center;
@@ -149,7 +156,6 @@ ul.index-reactions {
     }
 }
 
-
 /* ツイートアイコン */
 .tweet-icon{
     color:  #329eeb;
@@ -163,4 +169,14 @@ ul.index-reactions {
     position: relative;
     bottom: 0.7rem;
     left: 2rem;
+}
+
+/*ページネーション*/
+.more-dreams{
+    background-color: rgba(255, 255, 255, 0.623);
+    border-radius: 1rem;
+    padding: 1rem 3rem 1rem 3rem;
+}
+.more-dreams:hover{
+    text-decoration: none;
 }

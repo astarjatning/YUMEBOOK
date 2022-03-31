@@ -13,11 +13,12 @@
         = l diary.created_at, format: :long
       table.table.mb-0
         td= simple_format(diary.story)
-      .tag-list.ml-3
-        - diary.tags.each do |tag|
-          = link_to "##{tag.tag_name} ", tag_diaries_path(tag_id: tag.id), class: 'tag-button active-link mr-2 mt-2'
-      ul.reactions.d-flex
-        = render 'reactions', diary: diary
+      .own-tags-reactions
+        .tag-list.ml-3
+          - diary.tags.each do |tag|
+            = link_to "##{tag.tag_name} ", tag_diaries_path(tag_id: tag.id), class: 'tag-button active-link mr-2 mt-2'
+        ul.reactions.d-flex
+          = render 'reactions', diary: diary
       .float-right
         = link_to "https://twitter.com/share?url=#{ request.url }&text=今日こんなゆめ見ました%0a「#{ diary.title }」%0a&hashtags=夢,夢日記,YUMEBOOK", class: 'tweet-button', target: '_blank' do
           i.fab.fa-twitter

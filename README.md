@@ -15,7 +15,7 @@ https://www.yume-book.com
 
 | リアクション機能 | 投稿画面 |
 | ---- | ---- |
-| [![Image from Gyazo](https://i.gyazo.com/c135d6aa06923731efd0fd934bad78dd.gif)](https://gyazo.com/c135d6aa06923731efd0fd934bad78dd) | [![Image from Gyazo](https://i.gyazo.com/9f8fad57e6d62d7b8507783f35818878.png)](https://gyazo.com/9f8fad57e6d62d7b8507783f35818878) |
+| [![Image from Gyazo](https://i.gyazo.com/c135d6aa06923731efd0fd934bad78dd.gif)](https://gyazo.com/c135d6aa06923731efd0fd934bad78dd) | [![Image from Gyazo](https://i.gyazo.com/9f008739ce712cec5932b62637978d1a.png)](https://gyazo.com/9f008739ce712cec5932b62637978d1a) |
 | 5種のボタンで自由にリアクションする事ができます。 | ログインすると自分の夢を投稿する事ができます。 |
 
 
@@ -32,4 +32,4 @@ https://www.yume-book.com
 
 
 ## ER図
-[![Image from Gyazo](https://i.gyazo.com/b956b79eebd2d8290119cd85bc921b8c.png)](https://gyazo.com/b956b79eebd2d8290119cd85bc921b8c)
+[![Image from Gyazo](https://i.gyazo.com/11d8659a33aeabc30f8681df26730c60.png)](https://gyazo.com/11d8659a33aeabc30f8681df26730c60)
