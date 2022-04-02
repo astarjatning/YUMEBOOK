@@ -14,5 +14,5 @@
         = link_to "##{tag.tag_name} ", tag_diaries_path(tag_id: tag.id), class: 'index-tags active-link mr-2'
       - if logged_in? && current_user.own?(diary)
         .index-twitter-icon.active-link.float-right
-          = link_to "https://twitter.com/share?url=https://yume-book.com/diaries/#{diary.id}&text=今日こんなゆめ見ました%0a「#{ diary.title }」%0a&hashtags=夢,夢日記,YUMEBOOK", class: 'tweet-icon', target: '_blank' do
+          = link_to "https://twitter.com/share?url=https://www.yume-book.com/diaries/#{diary.id}&text=今日こんなゆめ見ました%0a「#{ diary.title }」%0a&hashtags=夢,夢日記,YUMEBOOK", class: 'tweet-icon', target: '_blank' do
             i.fab.fa-twitter
