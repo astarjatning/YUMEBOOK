@@ -11,5 +11,4 @@ class LaughsController < ApplicationController
   def set_diary
     @diary = Diary.find(params[:id])
   end
-
 end

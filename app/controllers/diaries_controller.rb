@@ -9,7 +9,7 @@ class DiariesController < ApplicationController
   def new
     @diary = Diary.new
   end
-  
+
   def create
     @diary = current_user.diaries.build(diary_params)
     tag_list = params[:diary][:tag_name].split(/[[:blank:]]/)

@@ -33,7 +33,7 @@ gem 'sorcery'
 gem 'slim-rails'
 gem 'kaminari'
 gem 'meta-tags'
-gem "aws-sdk-s3", require: false
+gem 'aws-sdk-s3', require: false
 gem 'simple_calendar'
 
 group :development, :test do

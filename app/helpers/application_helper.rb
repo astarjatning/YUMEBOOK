@@ -1,5 +1,4 @@
 module ApplicationHelper
-
   def page_title(page_title = '')
     base_title = 'YUMEBOOK'
 
@@ -16,7 +15,7 @@ module ApplicationHelper
       canonical: request.original_url,
       separator: '|',
       icon: [
-      { href: image_url('favicon.ico') },
+        { href: image_url('favicon.ico') }
       ],
       og: {
         site_name: :site,
@@ -25,10 +24,10 @@ module ApplicationHelper
         type: 'website',
         url: request.original_url,
         image: image_url('ogp.png'),
-        locale: 'ja_JP',
+        locale: 'ja_JP'
         },
       twitter: {
-        card: 'summary_large_image',
+        card: 'summary_large_image'
       }
     }
   end

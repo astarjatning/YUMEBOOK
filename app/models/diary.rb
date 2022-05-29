@@ -12,17 +12,17 @@ class Diary < ApplicationRecord
   validates :story, presence: true
 
   def save_tag(sent_tags)
-    exist_tags = self.tags.pluck(:tag_name) unless self.tags.nil?
+    exist_tags = tags.pluck(:tag_name) unless tags.nil?
     older_tags = exist_tags - sent_tags
     new_tags = sent_tags - exist_tags
 
     older_tags.each do |old|
-      self.tags.delete Tag.find_by(tag_name: old)
+      tags.delete Tag.find_by(tag_name: old)
     end
 
     new_tags.each do |new|
       new_diary_tag = Tag.find_or_create_by(tag_name: new)
-      self.tags << new_diary_tag
+      tags << new_diary_tag
     end
   end
 end
