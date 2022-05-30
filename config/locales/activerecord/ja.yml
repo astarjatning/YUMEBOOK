@@ -3,6 +3,9 @@ ja:
     models:
       user: 'ユーザー'
       dream: 'ゆめ'
+      diary: '投稿'
+      tag: 'タグ'
+      diary_tag: '投稿-タグ'
     attributes:
       user:
         name: 'ユーザーネーム'
