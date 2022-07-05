@@ -4,7 +4,7 @@ class ChangeNotnullToDiaries < ActiveRecord::Migration[6.1]
     change_column_null :diaries, :title, false
     change_column_null :diaries, :story, false
   end
-  
+
   def down
     change_column_null :diaries, :date, false
     change_column_null :diaries, :title, true

@@ -81,7 +81,7 @@ Rails.application.configure do
       password:             Rails.application.credentials.dig(:mailer, :app_password),
       authentication:       :login
     }
-  
+
   config.action_mailer.default_url_options = { protocol: 'https', host: 'www.yume-book.com' }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to

@@ -10,7 +10,7 @@ header
             i.fas.fa-pencil-alt
             = t('defaults.new_post')
         .nav-item.mr-3
-          - if controller.controller_name == 'users' && controller.action_name == 'show' && current_user.self?(@user)
+          - if controller.users_show? && current_user.self?(user)
             = link_to profile_path, class: 'nav-link active' do
               = image_tag current_user.avatar, class: 'avatar-icon rounded-circle mr15', size: '30x30'
               = t('defaults.profile')

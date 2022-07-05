@@ -14,7 +14,7 @@ html
       = render 'shared/google_tags'
   body
     - if logged_in?
-      = render 'shared/loggedin_header'
+      = render 'shared/loggedin_header', user: @user
     - else
       = render 'shared/before_login_header'
   .contents

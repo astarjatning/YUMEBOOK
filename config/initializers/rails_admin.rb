@@ -33,7 +33,7 @@ RailsAdmin.config do |config|
   # config.show_gravatar = true
 
   config.main_app_name = %w(YUMEBOOK)
-  
+
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory
