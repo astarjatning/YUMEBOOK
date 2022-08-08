@@ -10,10 +10,23 @@ RSpec.describe "ゆめ投稿機能", type: :system do
     
     context '非ログインユーザーが閲覧している時' do
       it '投稿一覧が閲覧できる' do
-        # 最新の投稿10件が画面上に表示されている事を確認
         visit root_path
         expect(page).to have_content(diary_a.title)
         expect(page).to have_content(diary_b.title)
+      end
+
+      it '非ログインユーザー用コンテンツが表示されている' do
+        visit root_path
+        expect(page).to have_content 'ログイン'
+        expect(page).to have_no_content 'マイページ'
+      end
+
+      it 'リアクションボタンを押せる' do
+        visit root_path
+        click_on diary_a.title
+        expect(page).to have_no_content '1'
+        click_on 'test-like'
+        expect(page).to have_content '1'
       end
     end
 
@@ -30,7 +43,6 @@ RSpec.describe "ゆめ投稿機能", type: :system do
       end
 
       it 'ログインユーザー向けのコンテンツになっている' do
-        # 画面上に投稿する・マイページ・ログアウトメニューが表示されている事を確認
         expect(page).to have_content '投稿する'
         expect(page).to have_content 'マイページ'
         expect(page).to have_content 'ログアウト'
