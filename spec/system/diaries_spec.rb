@@ -15,12 +15,6 @@ RSpec.describe "投稿機能", type: :system do
         expect(page).to have_content(diary_b.title)
       end
 
-      it '非ログインユーザー用コンテンツが表示されている' do
-        visit root_path
-        expect(page).to have_content 'ログイン'
-        expect(page).to have_no_content 'マイページ'
-      end
-
       it 'リアクションボタンを押せる' do
         visit root_path
         click_on diary_a.title
@@ -31,45 +25,19 @@ RSpec.describe "投稿機能", type: :system do
     end
 
     context 'ユーザーAがログインしている時' do
-      before do
+      it '自分の投稿をツイッターに投稿できる' do
         login(user_a)
         visit root_path
-      end
-
-      it '自分の投稿をツイッターに投稿できる' do
         click_on diary_a.title
         expect(page).to have_selector('.tweet-icon')
         expect(current_path).to eq(diary_path(diary_a.id))
       end
-
-      it 'ログインユーザー向けのコンテンツになっている' do
-        expect(page).to have_content '投稿する'
-        expect(page).to have_content 'マイページ'
-        expect(page).to have_content 'ログアウト'
-      end
-
-      it 'マイページにアクセスできる' do
-        click_on 'マイページ'
-        expect(page).to have_content(Date.today.year)
-        expect(page).to have_content(Date.today.month)
-        expect(page).to have_content(diary_a.title)
-        expect(page).to have_no_content(diary_b.title)
-      end
     end
 
-    context 'ユーザーBでログインしている時' do
-      before do
+    context 'ユーザーBでログインしている時' do      
+      it '他ユーザーの投稿はツイッター投稿できない' do
         login(user_b)
         visit root_path
-      end
-
-      it 'ユーザーBのマイページにアクセスできる' do
-        click_on 'マイページ'
-        expect(page).to have_content(diary_b.title)
-        expect(page).to have_no_content(diary_a.title)
-      end
-
-      it '他ユーザーの投稿はツイッター投稿できない' do
         click_on diary_a.title
         expect(page).to have_no_selector('.tweet-icon')
       end
