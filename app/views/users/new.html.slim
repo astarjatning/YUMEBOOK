@@ -19,7 +19,7 @@
           = f.label :password_confirmation
           = f.password_field :password_confirmation, class: 'form-control'
         .form-group.text-center
-          = f.check_box :terms_of_service
+          = f.check_box :terms_of_service, id: 'test_terms'
           |
           = link_to '利用規約', terms_path, class: 'terms-of-service'
           | と
