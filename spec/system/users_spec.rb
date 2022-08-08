@@ -36,6 +36,21 @@ RSpec.describe "ユーザー機能", type: :system do
         expect(page).to have_content 'メールアドレスはすでに存在します'
         expect(current_path).to eq(users_path)
       end
+
+      it '退会できる' do
+        login(registered_user)
+        diary = create(:diary, user: registered_user)
+        visit edit_profile_path
+        click_on '退会する'
+        click_on 'test-delete-user'
+        expect(current_path).to eq(root_path)
+        expect(page).to have_no_content diary.title
+        visit login_path
+        fill_in 'メールアドレス', with: registered_user.email
+        fill_in 'パスワード', with: 'password'
+        click_button 'ログイン'
+        expect(page).to have_content 'ログインに失敗しました'
+      end
     end
   end
 end

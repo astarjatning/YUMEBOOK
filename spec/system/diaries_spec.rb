@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe "ゆめ投稿機能", type: :system do
+RSpec.describe "投稿機能", type: :system do
   
-  describe '一覧表示機能' do
-    let!(:user_a) { create :user }
-    let!(:user_b) { create :user }
+  describe '投稿表示' do
+    let(:user_a) { create :user }
+    let(:user_b) { create :user }
     let!(:diary_a) { create :diary, user: user_a }
     let!(:diary_b) { create :diary, user: user_b }
     
