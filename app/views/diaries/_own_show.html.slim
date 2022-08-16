@@ -1,6 +1,6 @@
       ul.list-inline.float-right
         li.list-inline-item
-          = link_to edit_diary_path(diary) do
+          = link_to edit_diary_path(diary), id: 'test-diary-edit' do
             i.fas.fa-edit.mr-3
         li.list-inline-item
           = link_to diary_path(diary), method: :delete, data: { confirm: '削除しますか？' } do

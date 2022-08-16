@@ -3,6 +3,6 @@
     i.fas.fa-heart.liked
   = diary.likes.count
 - else
-  = link_to create_like_path(diary), method: :post, remote:true, class: 'active-link' do
+  = link_to create_like_path(diary), method: :post, remote:true, class: 'active-link', id: 'test-like' do
     i.fas.fa-heart.not-reacted
   = diary.likes.count if diary.likes.any?
